@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE Tabula_Rasa>
+<Algorithme>
+  <nom>Algorithme</nom>
+  <date_creation>5/10/2022 15:53</date_creation>
+  <Elements>
+    <Action>
+      <Position>620;29</Position>
+      <StyleLien>2</StyleLien>
+      <PreAssertion>requeteRecherche
+partNombreDefi
+partNombreUtilisateur
+partDateSortie</PreAssertion>
+      <PostAssertion>partNombreDefi
+partNombreUtilisateur
+partDateSortie</PostAssertion>
+      <Titre>Adapter la formule de
+calcul de réputation</Titre>
+      <DetailsVisible>1</DetailsVisible>
+      <DetailsVideVisible>1</DetailsVideVisible>
+      <Enfants>
+        <Action>
+          <Position>328;181</Position>
+          <StyleLien>1</StyleLien>
+          <PreAssertion>requeteRecherche</PreAssertion>
+          <PostAssertion>listeCriteres</PostAssertion>
+          <Titre>Extraction critères de
+la requête</Titre>
+          <DetailsVisible>1</DetailsVisible>
+          <DetailsVideVisible>1</DetailsVideVisible>
+          <Enfants/>
+        </Action>
+        <Action>
+          <Position>904;185</Position>
+          <StyleLien>1</StyleLien>
+          <PreAssertion>listeCriteres</PreAssertion>
+          <PostAssertion>partNombreDefi
+partNombreUtilisateur
+partDateSortie</PostAssertion>
+          <Titre>Mise à jour des parts</Titre>
+          <DetailsVisible>1</DetailsVisible>
+          <DetailsVideVisible>1</DetailsVideVisible>
+          <Enfants/>
+        </Action>
+      </Enfants>
+    </Action>
+  </Elements>
+  <Dictionary>
+    <Entry>
+      <Name>partNombreDefi</Name>
+      <Type>float</Type>
+      <Signification>Part du critère de nombre de défi réalisé dans le calcul de réputation</Signification>
+    </Entry>
+    <Entry>
+      <Name>partNombreUtilisateur</Name>
+      <Type>float</Type>
+      <Signification>Part du critère de nombre d'utilisateur unique ayant joué au jeu dans le calcul de réputation</Signification>
+    </Entry>
+    <Entry>
+      <Name>partDateSortie</Name>
+      <Type>float</Type>
+      <Signification>Part du critère de nombre de défi réalisé dans le calcul de réputation</Signification>
+    </Entry>
+    <Entry>
+      <Name>requeteRecherche</Name>
+      <Type>liste</Type>
+      <Signification>Requête de recherche que l'utilisateur. à l'intérieur on y trouve la chaîne de caractère saisie par l'utilisateur ainsi que les critères de recherche sélectionné avec leur ordre d'importance</Signification>
+    </Entry>
+  </Dictionary>
+</Algorithme>
