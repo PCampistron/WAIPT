@@ -2,10 +2,10 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>Algorithme</nom>
-  <date_creation>5/10/2022 15:53</date_creation>
+  <date_creation>6/10/2022 09:26</date_creation>
   <Elements>
     <Action>
-      <Position>620;29</Position>
+      <Position>580;33</Position>
       <StyleLien>2</StyleLien>
       <PreAssertion>requeteRecherche
 partNombreDefi
@@ -21,18 +21,44 @@ calcul de réputation</Titre>
       <Enfants>
         <Action>
           <Position>328;181</Position>
-          <StyleLien>1</StyleLien>
+          <StyleLien>2</StyleLien>
           <PreAssertion>requeteRecherche</PreAssertion>
-          <PostAssertion>listeCriteres</PostAssertion>
+          <PostAssertion>listeCriteres
+nbCriteres</PostAssertion>
           <Titre>Extraction critères de
 la requête</Titre>
           <DetailsVisible>1</DetailsVisible>
           <DetailsVideVisible>1</DetailsVideVisible>
-          <Enfants/>
+          <Enfants>
+            <Action>
+              <Position>337;328</Position>
+              <StyleLien>1</StyleLien>
+              <PreAssertion>∅</PreAssertion>
+              <PostAssertion>∅</PostAssertion>
+              <Titre>listeCriteres
+←
+requeteRecherche[1]</Titre>
+              <DetailsVisible>0</DetailsVisible>
+              <DetailsVideVisible>1</DetailsVideVisible>
+              <Enfants/>
+            </Action>
+            <Action>
+              <Position>549;330</Position>
+              <StyleLien>1</StyleLien>
+              <PreAssertion>∅</PreAssertion>
+              <PostAssertion>∅</PostAssertion>
+              <Titre>nbCriteres
+←
+longueur de listeCriteres</Titre>
+              <DetailsVisible>0</DetailsVisible>
+              <DetailsVideVisible>0</DetailsVideVisible>
+              <Enfants/>
+            </Action>
+          </Enfants>
         </Action>
         <Action>
           <Position>904;185</Position>
-          <StyleLien>1</StyleLien>
+          <StyleLien>2</StyleLien>
           <PreAssertion>listeCriteres</PreAssertion>
           <PostAssertion>partNombreDefi
 partNombreUtilisateur
@@ -40,7 +66,110 @@ partDateSortie</PostAssertion>
           <Titre>Mise à jour des parts</Titre>
           <DetailsVisible>1</DetailsVisible>
           <DetailsVideVisible>1</DetailsVideVisible>
-          <Enfants/>
+          <Enfants>
+            <Iteration>
+              <Position>1299.5;359.5</Position>
+              <StyleLien>1</StyleLien>
+              <Titre>pour numCritere
+de 0 à (nbCriteres - 1)</Titre>
+              <IterationFixe>1</IterationFixe>
+              <Enfants>
+                <ConditionMultiple>
+                  <Position>1219.5;472</Position>
+                  <StyleLien>0</StyleLien>
+                  <Titre>listeCriteres[numCritere]</Titre>
+                  <operationsLogiques>
+                    <operation>
+                      <Titre>defi</Titre>
+                      <Enfants>
+                        <Action>
+                          <Position>989;626</Position>
+                          <StyleLien>1</StyleLien>
+                          <PreAssertion>∅</PreAssertion>
+                          <PostAssertion>∅</PostAssertion>
+                          <Titre>partNombreDefi
+←
+partNombreDefi + additionPart</Titre>
+                          <DetailsVisible>0</DetailsVisible>
+                          <DetailsVideVisible>0</DetailsVideVisible>
+                          <Enfants/>
+                        </Action>
+                      </Enfants>
+                    </operation>
+                    <operation>
+                      <Titre>utilisateur</Titre>
+                      <Enfants>
+                        <Action>
+                          <Position>1213;628</Position>
+                          <StyleLien>1</StyleLien>
+                          <PreAssertion>∅</PreAssertion>
+                          <PostAssertion>∅</PostAssertion>
+                          <Titre>partNombreUtilisateur
+←
+partNombreUtilisateur + additionPart</Titre>
+                          <DetailsVisible>0</DetailsVisible>
+                          <DetailsVideVisible>0</DetailsVideVisible>
+                          <Enfants/>
+                        </Action>
+                      </Enfants>
+                    </operation>
+                    <operation>
+                      <Titre>date</Titre>
+                      <Enfants>
+                        <Action>
+                          <Position>1464;629</Position>
+                          <StyleLien>1</StyleLien>
+                          <PreAssertion>∅</PreAssertion>
+                          <PostAssertion>∅</PostAssertion>
+                          <Titre>partDateSortie
+←
+partDateSortie + additionPart</Titre>
+                          <DetailsVisible>0</DetailsVisible>
+                          <DetailsVideVisible>0</DetailsVideVisible>
+                          <Enfants/>
+                        </Action>
+                      </Enfants>
+                    </operation>
+                  </operationsLogiques>
+                </ConditionMultiple>
+                <Action>
+                  <Position>1546;466</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>?</PreAssertion>
+                  <PostAssertion>?</PostAssertion>
+                  <Titre>additionPart
+←
+additionPart - 1</Titre>
+                  <DetailsVisible>1</DetailsVisible>
+                  <DetailsVideVisible>0</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </Iteration>
+            <Action>
+              <Position>903;341</Position>
+              <StyleLien>2</StyleLien>
+              <PreAssertion>?</PreAssertion>
+              <PostAssertion>additionPart</PostAssertion>
+              <Titre>Initialisation des valeurs</Titre>
+              <DetailsVisible>1</DetailsVisible>
+              <DetailsVideVisible>0</DetailsVideVisible>
+              <Enfants>
+                <Action>
+                  <Position>935;457</Position>
+                  <StyleLien>1</StyleLien>
+                  <PreAssertion>∅</PreAssertion>
+                  <PostAssertion>∅</PostAssertion>
+                  <Titre>additionPart
+←
+nbCriteres</Titre>
+                  <DetailsVisible>0</DetailsVisible>
+                  <DetailsVideVisible>1</DetailsVideVisible>
+                  <Enfants/>
+                </Action>
+              </Enfants>
+            </Action>
+          </Enfants>
         </Action>
       </Enfants>
     </Action>
@@ -65,6 +194,11 @@ partDateSortie</PostAssertion>
       <Name>requeteRecherche</Name>
       <Type>liste</Type>
       <Signification>Requête de recherche que l'utilisateur. à l'intérieur on y trouve la chaîne de caractère saisie par l'utilisateur ainsi que les critères de recherche sélectionné avec leur ordre d'importance</Signification>
+    </Entry>
+    <Entry>
+      <Name>listeCriteres</Name>
+      <Type>float</Type>
+      <Signification>Liste de critères</Signification>
     </Entry>
   </Dictionary>
 </Algorithme>
