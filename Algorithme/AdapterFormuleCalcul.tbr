@@ -2,7 +2,7 @@
 <!DOCTYPE Tabula_Rasa>
 <Algorithme>
   <nom>Algorithme</nom>
-  <date_creation>6/10/2022 09:26</date_creation>
+  <date_creation>7/11/2022 14:50</date_creation>
   <Elements>
     <Action>
       <Position>580;33</Position>
@@ -31,7 +31,7 @@ la requête</Titre>
           <DetailsVideVisible>1</DetailsVideVisible>
           <Enfants>
             <Action>
-              <Position>337;328</Position>
+              <Position>335;331</Position>
               <StyleLien>1</StyleLien>
               <PreAssertion>∅</PreAssertion>
               <PostAssertion>∅</PostAssertion>
@@ -68,14 +68,14 @@ partDateSortie</PostAssertion>
           <DetailsVideVisible>1</DetailsVideVisible>
           <Enfants>
             <Iteration>
-              <Position>1299.5;359.5</Position>
+              <Position>1182.5;354.5</Position>
               <StyleLien>1</StyleLien>
               <Titre>pour numCritere
 de 0 à (nbCriteres - 1)</Titre>
               <IterationFixe>1</IterationFixe>
               <Enfants>
                 <ConditionMultiple>
-                  <Position>1219.5;472</Position>
+                  <Position>1102.5;467</Position>
                   <StyleLien>0</StyleLien>
                   <Titre>listeCriteres[numCritere]</Titre>
                   <operationsLogiques>
@@ -83,7 +83,7 @@ de 0 à (nbCriteres - 1)</Titre>
                       <Titre>defi</Titre>
                       <Enfants>
                         <Action>
-                          <Position>989;626</Position>
+                          <Position>884;616</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>∅</PreAssertion>
                           <PostAssertion>∅</PostAssertion>
@@ -91,7 +91,7 @@ de 0 à (nbCriteres - 1)</Titre>
 ←
 partNombreDefi + additionPart</Titre>
                           <DetailsVisible>0</DetailsVisible>
-                          <DetailsVideVisible>0</DetailsVideVisible>
+                          <DetailsVideVisible>1</DetailsVideVisible>
                           <Enfants/>
                         </Action>
                       </Enfants>
@@ -100,7 +100,7 @@ partNombreDefi + additionPart</Titre>
                       <Titre>utilisateur</Titre>
                       <Enfants>
                         <Action>
-                          <Position>1213;628</Position>
+                          <Position>1114;616</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>∅</PreAssertion>
                           <PostAssertion>∅</PostAssertion>
@@ -108,7 +108,7 @@ partNombreDefi + additionPart</Titre>
 ←
 partNombreUtilisateur + additionPart</Titre>
                           <DetailsVisible>0</DetailsVisible>
-                          <DetailsVideVisible>0</DetailsVideVisible>
+                          <DetailsVideVisible>1</DetailsVideVisible>
                           <Enfants/>
                         </Action>
                       </Enfants>
@@ -117,7 +117,7 @@ partNombreUtilisateur + additionPart</Titre>
                       <Titre>date</Titre>
                       <Enfants>
                         <Action>
-                          <Position>1464;629</Position>
+                          <Position>1378;615</Position>
                           <StyleLien>1</StyleLien>
                           <PreAssertion>∅</PreAssertion>
                           <PostAssertion>∅</PostAssertion>
@@ -125,7 +125,7 @@ partNombreUtilisateur + additionPart</Titre>
 ←
 partDateSortie + additionPart</Titre>
                           <DetailsVisible>0</DetailsVisible>
-                          <DetailsVideVisible>0</DetailsVideVisible>
+                          <DetailsVideVisible>1</DetailsVideVisible>
                           <Enfants/>
                         </Action>
                       </Enfants>
@@ -133,7 +133,7 @@ partDateSortie + additionPart</Titre>
                   </operationsLogiques>
                 </ConditionMultiple>
                 <Action>
-                  <Position>1546;466</Position>
+                  <Position>1415;460</Position>
                   <StyleLien>1</StyleLien>
                   <PreAssertion>?</PreAssertion>
                   <PostAssertion>?</PostAssertion>
@@ -147,7 +147,7 @@ additionPart - 1</Titre>
               </Enfants>
             </Iteration>
             <Action>
-              <Position>903;341</Position>
+              <Position>804;328</Position>
               <StyleLien>2</StyleLien>
               <PreAssertion>?</PreAssertion>
               <PostAssertion>additionPart</PostAssertion>
@@ -156,7 +156,7 @@ additionPart - 1</Titre>
               <DetailsVideVisible>0</DetailsVideVisible>
               <Enfants>
                 <Action>
-                  <Position>935;457</Position>
+                  <Position>838;445</Position>
                   <StyleLien>1</StyleLien>
                   <PreAssertion>∅</PreAssertion>
                   <PostAssertion>∅</PostAssertion>
@@ -192,13 +192,23 @@ nbCriteres</Titre>
     </Entry>
     <Entry>
       <Name>requeteRecherche</Name>
-      <Type>liste</Type>
+      <Type>liste de float</Type>
       <Signification>Requête de recherche que l'utilisateur. à l'intérieur on y trouve la chaîne de caractère saisie par l'utilisateur ainsi que les critères de recherche sélectionné avec leur ordre d'importance</Signification>
     </Entry>
     <Entry>
       <Name>listeCriteres</Name>
       <Type>float</Type>
       <Signification>Liste de critères</Signification>
+    </Entry>
+    <Entry>
+      <Name>additionPart</Name>
+      <Type>int</Type>
+      <Signification>Valeur à ajouter sur la part actuelle</Signification>
+    </Entry>
+    <Entry>
+      <Name>nbCriteres</Name>
+      <Type>int</Type>
+      <Signification>Nombre de critères dans la liste de critères</Signification>
     </Entry>
   </Dictionary>
 </Algorithme>
