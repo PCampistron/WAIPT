@@ -40,8 +40,6 @@
    $requete -> execute();
    $results= $requete->fetchAll();
 
-
-
    foreach ($results as $row) {
 
       $scoreDefi = ($row["nbDefi"] / $defiMax) * 1000;
@@ -70,11 +68,6 @@
       $requete -> execute();
       $results= $requete->fetchAll();
    }
-
-
-  
-
-  
 
    // preparer la requete 
    $requete = $db -> prepare ("SELECT * FROM JEU ORDER BY reputation DESC LIMIT 10;");
