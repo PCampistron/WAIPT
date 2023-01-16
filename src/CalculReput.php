@@ -6,15 +6,6 @@
 </head>
 <body>
 
-<!-- Barre de navigation -->
-<nav>
-    <img src="img/logo_cd.png" height="80px" width="120px" class="logo">
-    <h1 class="nom">CDisPLAY</h1>
-    <ul class="bar_nav">
-        <li><a href="classement.php" class="onglet">classement</a></li> 
-        <li><p class="separateurs">|</p></li>
-    </ul>
-</nav>
 
 <?php
     include "connDb.php" ; // Connexion à la BD
