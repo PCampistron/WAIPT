@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="CalculReput.php" method="POST">
+    <form action="recherche.php" method="POST">
         <input type="text" name="query"/>
 
         <p>Premier critère :</p>
