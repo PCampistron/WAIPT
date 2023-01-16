@@ -2,10 +2,12 @@
 
     class Requete
     {
+        // ATTRIBUTS
         private $partNombreDefi = 0;
         private $partNombreUtilisateur = 0;
         private $partDateSortie = 0;
 
+        // CONSTRUCTEUR
         public function __construct(array $listeCrit){
             
             // listeCriteres >> Calcul des nouvelles parts >> partNombreDefi, partNombreUtilisateur, partDateSortie
@@ -35,6 +37,7 @@
             }
         }
 
+        // ENCAPSULATION
         public function getPartNombreDefi()
         {
             return $this->partNombreDefi;
