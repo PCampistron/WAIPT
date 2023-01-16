@@ -1,9 +1,25 @@
-<?php
-    $dbname='pcampistron_bd'; // Nom de la base de données
-    $dsn="mysql:host=lakartxela;dbname=$dbname";
-    $user ='pcampistron_bd';
-    $pass='pcampistron_bd';
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
 
+<!-- Barre de navigation -->
+<nav>
+    <img src="img/logo_cd.png" height="80px" width="120px" class="logo">
+    <h1 class="nom">CDisPLAY</h1>
+    <ul class="bar_nav">
+        <li><a href="classement.php" class="onglet">classement</a></li> 
+        <li><p class="separateurs">|</p></li>
+    </ul>
+</nav>
+
+<?php
+    include "connDb.php" ; // Connexion à la BD
+
+    
 
     $nbCritere = 0;
     $partNombreDefi = 0;
