@@ -1,17 +1,18 @@
 <?php
     include "Requete.php";
 
-    
-
     class TraiterBD
     {
+        // ATTRIBUTS
         private Requete $requete;
         
+        // CONSTRUCTEUR
         public function __construct(Requete $uneRequete)
         {
             $this->requete = $uneRequete;
         }
 
+        // METHODES SPECIFIQUES
         public function majBD()
         {
             $dbname ='pcampistron_bd';
