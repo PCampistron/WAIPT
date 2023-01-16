@@ -58,7 +58,6 @@
       $nbJour = (int) $interval->format('%a');
 
       $scoreDate = ($nbJour / $nbJourMinMax) * 1000;
-      var_dump($scoreDate);
 
       // 3 Application des coefs
 
