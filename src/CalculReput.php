@@ -1,21 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="style.css">
-  
-</head>
-<body>
-
-
 <?php
-    include "connDb.php" ; // Connexion à la BD
-
-    
+    include_once "TraiterBD.php";
 
     $nbCritere = 0;
-    $partNombreDefi = 0;
-    $partNombreUtilisateur = 0;
-    $partDateSortie = 0;
     $listeCriteres = (array) null;
 
     // requeteRecherche >> Extraction des critères de la requête >> listeCriteres, nbCriteres
@@ -49,33 +35,16 @@
 
     if($nbCritere > 0)
     {
-        // listeCriteres >> Calcul des nouvelles parts >> partNombreDefi, partNombreUtilisateur, partDateSortie
-        
-        // Initialisation des valeurs >> additionPart
-        $additionPart = $nbCritere;
-        
-        for($numCritere = 0 ; $numCritere < $nbCritere ; $numCritere++)
-        {
-            switch($listeCriteres[$numCritere])
-            {
-                case 'nbDefi':
-                    $partNombreDefi = $additionPart;
-                    break;
-                case 'nbUtilisateur':
-                    $partNombreUtilisateur = $additionPart;
-                    break;
-                case 'dateSortie':
-                    $partDateSortie = $additionPart;
-                    break;
-                default:
-                    break;
-            }
+        $requete = new Requete($listeCriteres);
 
-            $additionPart--;
-        }
+        $traiter = new TraiterBD($requete);
+
+        $traiter->majBD();
+
+        echo "Part nbDefi : " . $requete->getPartNombreDefi() . "<BR>";
+        echo "Part nbUtilisateur : " . $requete->getPartNombreUtilisateur() . "<BR>";
+        echo "Part dateSortie : " . $requete->getPartDateSortie() . "<BR>";
     }
 
-    echo "Part nbDefi : " . $partNombreDefi;
-    echo "Part nbUtilisateur : " . $partNombreUtilisateur;
-    echo "Part dateSortie : " . $partDateSortie;
+    
 ?>
