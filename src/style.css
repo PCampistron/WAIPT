@@ -1,0 +1,113 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #9b9a9a;
+   
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-areas: "gauche milieu droite";
+    background-color: #686157;
+    }
+    
+    #gauche
+    {
+      grid-area: gauche;
+      padding : 3%;
+    }
+    
+    #titre {
+        color: 20px bold black;
+    }
+
+    #centre
+    {
+      grid-area: milieu;
+      text-align: center;
+      padding : 3%;
+    }
+    
+    #centre ul
+    {
+      list-style: none;
+      color: white;
+      padding-left: 0;
+    }
+    
+    #centre li
+    {
+      display: inline;
+      padding: 0 10px;
+    }
+    
+    #droite
+    {
+      grid-area: droite;
+      text-align: right;
+      padding : 3%;
+    }
+    
+    #droite a
+    {
+      margin-right: 30px;
+    }
+    
+   
+    .container
+    {
+      text-align: center;
+      
+    }
+    
+    
+
+    .container input
+    {
+      margin: 5px ;
+     
+    }
+    
+   .p { 
+    color: 20px bold black;
+   }
+
+   .cd {
+    
+    height: 300px;
+    width: 30% ;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 300px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border: 1px solid #333;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin:auto;
+    
+    
+}
+.presentation{
+    margin:auto;
+    grid-area: 1 / 1 / 2 / 2;
+    display: grid;
+    grid-template-columns: repeat(1,1);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 20px;
+}
+
+.Pochette { grid-area: 1 / 1 / 4 / 2;
+        margin-bottom: 10px; }
+
+.caseJeu {
+    border: 1px solid #333;
+
+}
