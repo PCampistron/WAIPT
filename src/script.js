@@ -11,3 +11,4 @@ function activerCrit3()
     document.getElementById("bouton8").disabled = false;
     document.getElementById("bouton9").disabled = false;
 }
+

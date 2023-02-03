@@ -33,9 +33,9 @@
         </nav>
       </div>
       <div id="droite">
-        <a href="#">
-          <p>Se connecter</p>
-        </a>
+     <form  action="connexion.php" method="post">
+    <input type="submit" value="Se connecter">
+    </form>
       </div>
 
   </header>
@@ -80,5 +80,49 @@
 
         <input type="submit" value="Rechercher">
     </form>
+
+
+    <h1> Tirer un jeu au hasard </h1>
+
+
+  
+
+    <?php
+include "connDb.php";
+
+$requete = $db->prepare("SELECT * FROM JEU ORDER BY RAND() LIMIT 1");
+$requete->execute();
+$results = $requete->fetchAll();
+
+// Recuperation du nom et de l'id du jeu tiré
+$id_jeu = $results[0]['id_jeu'];
+$nom_jeu = $results[0]['nom'];
+$prix_jeu = $results[0]['prixConseille'];
+
+// Recuperation des genres du jeu tiré
+$genre = $db->prepare("SELECT g.nom FROM CARACTERISER c JOIN JEU j ON c.id_jeu = j.id_jeu JOIN GENRE g ON c.id_genre = g.id_genre WHERE c.id_jeu = '$id_jeu'");
+$genre->execute();
+$genres = $genre->fetchAll();
+
+$nom_genre = $genres[0]['nom'];
+
+echo '<button id="random_button"> Tirage aléatoire</button>';
+echo '<div id="result" style="display: none;">';
+echo '<p>Nom du jeu : ' . $nom_jeu . '</p>';
+echo '<img src="img/'.$id_jeu.'_carre.jpg" height="200" width="220" alt="Pochette" class="Pochette">';
+echo '<p>Genre : ' . $nom_genre . '</p>';
+echo '<p>Prix : ' . $prix_jeu . '  €</p>';
+echo '<form action="pageDuJeu.php"  method="POST" class="description">  <input type="hidden" name="jeu_id" value="' . $id_jeu . '"><button type="submit"> Page du jeu </button> </form> ';
+echo '</div>';
+
+?>
+
+<script>
+document.getElementById("random_button").addEventListener("click", function(){
+  document.getElementById("result").style.display = "block";
+});
+</script>;
+
+
 </body>
 </html>

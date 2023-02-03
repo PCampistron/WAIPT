@@ -40,6 +40,7 @@
   <main>
     <div class="container">
     <h1> Catalogue </h1>
+
 <?php
 include "connDb.php";
 

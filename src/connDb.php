@@ -11,6 +11,8 @@ try {
     $db = new PDO ($dsn, $user, $pass);
     } catch (PDOException $exc) {          // Vérification connexion -> affichage message d'erreur si nécessaire
       echo $exc->getMessage();
+      echo "<br>";
+      echo 'Erreur de connexion à la Base de donnée';
       exit();
     }
 ?>
