@@ -104,7 +104,7 @@
     $requete -> execute();
     $results= $requete->fetchAll();  // organiser les résultats de la requête
 
-   
+    
 
     foreach ($results as $row) {
         echo '<article class="caseJeu">';
