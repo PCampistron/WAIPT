@@ -1,3 +1,14 @@
+/**
+ * @file main.cpp
+ * @author Pierre Campistron (pier.campistron@gmail.com)
+ * @brief Prototype de la recherche par critère
+ * @version 0.1
+ * @date 2023-02-06
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #include <list>
 #include <iostream>
 
