@@ -123,7 +123,7 @@ echo '</div>';
 document.getElementById("random_button").addEventListener("click", function(){
   document.getElementById("result").style.display = "block";
 });
-</script>;
+</script>
 
 
 </body>
