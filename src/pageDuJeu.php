@@ -42,30 +42,25 @@
   <main>
     
 <?php
-// Établit la connexion à la base de données
-include "connDb.php";
+  // Établit la connexion à la base de données
+  include "connDb.php";
 
-
-
- // Récupération de l'identifiant de produit
- $id_jeu = $_POST['jeu_id'];
- 
+  // Récupération de l'identifiant du jeu
+  $id_jeu = $_GET['id'];
+  
 
   // Préparation de la requête SQL
   $requete =  $db -> prepare ("SELECT * FROM JEU WHERE id_jeu = '$id_jeu'");
   $requete -> execute();
   $results= $requete->fetchAll();
- 
+  
   echo '<h1> Page du jeu : ' . $results[0]['nom'] .' </h1>' ;
- 
- 
- // Parcoure chaque ligne de résultat et affiche les CDs
- foreach ($results as $row) {
-     //récupération des données de l'image originale
-     echo '<img src="img/'. $row['id_jeu'].'_carre.jpg" height="400" width="420" alt="Pochette" class="Pochette">';
-     echo '<h3 class="titre_desc"> Nom du jeu : ' . $row['nom'];
-     echo '<p class="info_desc"> Prix : ' . $row['prixConseille'] . ' €</p>';
-     
-    
- }
- 
+  
+  // Affiche le jeu
+  foreach ($results as $row) {
+    //récupération des données de l'image originale
+    echo '<img src="img/'. $row['id_jeu'].'_carre.jpg" height="400" width="420" alt="Pochette" class="Pochette">';
+    echo '<h3 class="titre_desc"> Nom du jeu : ' . $row['nom'];
+    echo '<p class="info_desc"> Prix : ' . $row['prixConseille'] . ' €</p>';
+  }
+ ?>

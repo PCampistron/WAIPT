@@ -112,7 +112,9 @@ echo '<p>Nom du jeu : ' . $nom_jeu . '</p>';
 echo '<img src="img/'.$id_jeu.'_carre.jpg" height="200" width="220" alt="Pochette" class="Pochette">';
 echo '<p>Genre : ' . $nom_genre . '</p>';
 echo '<p>Prix : ' . $prix_jeu . '  €</p>';
-echo '<form action="pageDuJeu.php"  method="POST" class="description">  <input type="hidden" name="jeu_id" value="' . $id_jeu . '"><button type="submit"> Page du jeu </button> </form> ';
+
+$lien = "<form action='pageDuJeu.php?id=" . $id_jeu . "' method='POST' class='description'>  <input type='hidden' name='jeu_id' value='" . $id_jeu . "'><button type='submit'> Page du jeu </button> </form> ";
+echo $lien;
 echo '</div>';
 
 ?>
