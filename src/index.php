@@ -110,10 +110,6 @@
       include "Jeu.php";
       include "TraiterBD.php";
 
-      
-
-  
-
       if(isset($_POST['random_button']))
       {
           $traiter = new TraiterBD();
@@ -126,10 +122,9 @@
           {
             $chaineGenres = $chaineGenres . " " . $genre;
           }
-         
           include "afficherJeu.php";
-
       }
+
       if(isset($_POST['random_button_gouts']))
       {
           $traiter = new TraiterBD();
