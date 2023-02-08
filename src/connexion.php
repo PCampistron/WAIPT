@@ -13,9 +13,9 @@
 
     
     <header>
-    <?php
-      include "menuNav.php";
-    ?>
+      <?php
+        include "menuNav.php";
+      ?>
   </header>
       <main>
     <div class="container">
@@ -40,9 +40,24 @@
 
       <input type="submit" value="Se connecter">
 
-    <div>
-    <br> <br>
-      Pas de compte ? <br>
-      <a href ="creationCompte.php"> Créer un compte </a>
-    </div>
-    </div>
+        <div>
+        <br> <br>
+          Pas de compte ? <br>
+          <a href ="creationCompte.php"> Créer un compte </a>
+        </div>
+        </div>
+
+        <!-- <form class="row g-3">
+  <div class="col-auto">
+    <label for="staticEmail2" class="visually-hidden">Email</label>
+    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+  </div>
+  <div class="col-auto">
+    <label for="inputPassword2" class="visually-hidden">Password</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+  </div>
+</form> -->
+        

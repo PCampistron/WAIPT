@@ -15,9 +15,11 @@
     <?php
       include "menuNav.php";
     ?>
+   </header>
   <main>
     <div class="container">
     <h1> Classement </h1>
+
 <?php
    include "connDb.php"; // Connexion à la BD
 
