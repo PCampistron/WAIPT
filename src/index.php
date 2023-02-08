@@ -48,7 +48,7 @@
             </button>
           </li>
         </ul>
-        <button class="btn btn-outline-success" type="submit">Se connecter</button>
+        <a class="btn btn-outline-success" href="connexion.php">Se connecter</a>
       </div>
     </nav>
   </header>
@@ -56,9 +56,17 @@
 
 </head>
 <body>
-    
-    <!--
+  <!--
     <form action="recherche.php" method="POST">
+      <div class="container">
+        <img src="" class="img-fluid" alt="...">
+        <div class="text">
+          <h1>Tirer un jeu au hasard</h1>
+        </div>
+      </div>
+
+    
+        
       <input type="text" name="query"/>
 
         <p>Premier critère :</p>
@@ -95,13 +103,6 @@
     </form>
   -->
 
-  
-      <div class="container">
-        <img src="" class="img-fluid" alt="...">
-        <div class="text">
-          <h1>Tirer un jeu au hasard</h1>
-        </div>
-      </div>
 
   
 
