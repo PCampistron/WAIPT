@@ -71,7 +71,7 @@ include "connDb.php";
  foreach ($results as $row) {
     echo '<article class="cd">';
     echo '<div class="presentation">';
-    echo '<h3>' . $row['nom'] ;
+    echo '<h3>' . $row['nom_jeu'] ;
     //CREATION D'ICONES
     echo '<img src="img/'.$row['id_jeu'].'_carre.jpg" height="180" width="220" alt="Pochette" class="Pochette">';
     echo '<p class="prix" > Prix : ' . $row['prixConseille'] . ' €</p>';

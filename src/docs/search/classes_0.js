@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['critere_0',['Critere',['../class_critere.html',1,'']]]
+  ['jeu_0',['Jeu',['../class_jeu.html',1,'']]]
 ];

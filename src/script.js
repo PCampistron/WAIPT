@@ -12,3 +12,11 @@ function activerCrit3()
     document.getElementById("bouton9").disabled = false;
 }
 
+function tirerUnJeu()
+{
+    
+
+    document.getElementById("result").style.display = "block";
+
+    document.getElementById("nomJeu").innerText = "Nom du jeu :" + jeu.getNom();
+}
