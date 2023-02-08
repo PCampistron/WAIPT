@@ -9,33 +9,9 @@
 
     
     <header>
-    <div id="gauche">
-        <a href="index.php">
-          <img src="img/Logo.jpg" alt="logo" height=50px width=50px> 
-        </a>
-      </div>
-      <div id="centre">
-        <nav>
-          <ul>
-            <li>
-              <a href="catalogue.php">
-                Catalogue
-              </a>
-            </li>
-            <li>
-              <a href="classement.php">
-                Classement
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div id="droite">
-        <a href="#">
-          <p>Se connecter</p>
-        </a>
-      </div>
-
+      <?php
+        include "menuNav.php";
+      ?>
   </header>
   <main>
     <div class="container">
