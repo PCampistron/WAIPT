@@ -49,18 +49,22 @@
   $id_jeu = $_GET['id'];
   
 
-  // Préparation de la requête SQL
-  $requete =  $db -> prepare ("SELECT * FROM JEU WHERE id_jeu = '$id_jeu'");
-  $requete -> execute();
-  $results= $requete->fetchAll();
-  
-  echo '<h1> Page du jeu : ' . $results[0]['nom'] .' </h1>' ;
-  
-  // Affiche le jeu
-  foreach ($results as $row) {
-    //récupération des données de l'image originale
-    echo '<img src="img/'. $row['id_jeu'].'_carre.jpg" height="400" width="420" alt="Pochette" class="Pochette">';
-    echo '<h3 class="titre_desc"> Nom du jeu : ' . $row['nom'];
-    echo '<p class="info_desc"> Prix : ' . $row['prixConseille'] . ' €</p>';
-  }
+ // Préparation de la requête SQL 
+ $requete =  $db -> prepare ("SELECT * FROM JEU j JOIN DISPONIBILITE d on j.id_jeu = d.id_jeu JOIN PLATEFORME p on d.id_plateforme = p.id_plateforme 
+   JOIN DEFI def on def.id_jeu = j.id_jeu 
+ WHERE j.id_jeu = '$id_jeu'"); 
+ $requete -> execute(); 
+ $results= $requete->fetchAll(); 
+ var_dump($results) ;
+
+ // Parcoure chaque ligne du résultat et affiche les données du jeu 
+ foreach ($results as $row) { 
+  echo '<article class="cd">';
+   echo '<div class="presentation">'; 
+   echo '<img src="img/'. $row['id_jeu'].'_carre.jpg" height="400" width="420" alt="Pochette" class="Pochette">'; 
+   echo '<h3 class="titre_desc"> Nom du jeu : ' . $row['nom_jeu']; 
+   echo '<p class="info_desc"> Prix Conseille : ' . $row['prixConseille'] . ' €</p>';
+    echo '<p class="info_desc"> Lien magasin : <a href='. $row['lienMagasin'] .'> Page du jeu </a href>'; 
+    echo '<p class="info_desc"> Liste des defis : ' . $row['intitule'];
+   }
  ?>

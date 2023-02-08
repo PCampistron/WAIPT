@@ -94,13 +94,38 @@
 
       echo '<form action="index.php" method="POST">'  ;
       echo '<input type="submit" name="random_button" value="Tirage aléatoire"></button>';
+      echo '<input type="submit" name="random_button_gouts" value="Tirage aléatoire selon vos gouts"></button>';
       echo '</form>';
+
+  
 
       if(isset($_POST['random_button']))
       {
           $traiter = new TraiterBD();
 
           $jeu = $traiter->tirerJeu();
+
+          $chaineGenres = "";
+
+          foreach($jeu->getGenres() as $genre)
+          {
+            $chaineGenres = $chaineGenres . " " . $genre;
+          }
+
+          echo '<div id="result" style="display: block;">';
+          echo '<p id="nomJeu">Nom du jeu : ' . $jeu->getNom() . '</p>';
+          echo '<img id="imageJeu" src="img/'. $jeu->getIdJeu() .'_carre.jpg" height="200" width="220" alt="Pochette" class="Pochette">';
+          echo '<p id="genresJeu">Genre : ' . $chaineGenres . '</p>';
+          echo '<p id="prixJeu"> Prix : ' . $jeu->getPrixConseille() . '  €</p>';
+
+          echo "<form action='pageDuJeu.php?id=" . $jeu->getIdJeu() . "' method='POST' class='description'>  <input type='hidden' name='jeu_id' value='" . $jeu->getIdJeu() . "'><button type='submit'> Page du jeu </button> </form> ";
+          echo '</div>';
+      }
+      if(isset($_POST['random_button_gouts']))
+      {
+          $traiter = new TraiterBD();
+
+          $jeu = $traiter->tirerJeuGouts();
 
           $chaineGenres = "";
 
