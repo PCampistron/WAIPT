@@ -77,7 +77,7 @@
     {
         $requete = new Requete($listeCriteres);
 
-        $traiter = new TraiterBD($requete);
+        $traiter = TraiterBD::avecRequete($requete);
 
         $traiter->majBD();
     }

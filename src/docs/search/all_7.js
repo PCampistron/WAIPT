@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['pagedujeu_2ephp_0',['pageDuJeu.php',['../page_du_jeu_8php.html',1,'']]]
+  ['jeu_0',['Jeu',['../class_jeu.html',1,'']]],
+  ['jeu_2ephp_1',['Jeu.php',['../_jeu_8php.html',1,'']]]
 ];

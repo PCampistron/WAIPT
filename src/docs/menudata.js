@@ -35,7 +35,6 @@ var menudata={children:[
 {text:"Variables globale",url:"globals.html",children:[
 {text:"Tout",url:"globals.html",children:[
 {text:"$",url:"globals.html#index__24"},
-{text:"_",url:"globals.html#index__5F"},
 {text:"e",url:"globals.html#index_e"},
 {text:"m",url:"globals.html#index_m"},
 {text:"t",url:"globals.html#index_t"}]},

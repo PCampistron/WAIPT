@@ -1,12 +1,4 @@
 var searchData=
 [
-  ['catalogue_2ephp_0',['catalogue.php',['../catalogue_8php.html',1,'']]],
-  ['classement_2ephp_1',['classement.php',['../classement_8php.html',1,'']]],
-  ['confirmerconnexion_2ephp_2',['confirmerConnexion.php',['../confirmer_connexion_8php.html',1,'']]],
-  ['confirmercreationcompte_2ephp_3',['confirmerCreationCompte.php',['../confirmer_creation_compte_8php.html',1,'']]],
-  ['conndb_2ephp_4',['connDb.php',['../conn_db_8php.html',1,'']]],
-  ['connexion_2ephp_5',['connexion.php',['../connexion_8php.html',1,'']]],
-  ['creationcompte_2ephp_6',['creationCompte.php',['../creation_compte_8php.html',1,'']]],
-  ['critere_7',['Critere',['../class_critere.html',1,'']]],
-  ['critere_2ephp_8',['Critere.php',['../_critere_8php.html',1,'']]]
+  ['avecrequete_0',['avecRequete',['../class_traiter_b_d.html#afcc862fd90274e9f09a4f6c7dd354be3',1,'TraiterBD']]]
 ];
