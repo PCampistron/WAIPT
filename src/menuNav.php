@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="img/Logo.jpg" alt="Logo" height=50px width=50px class="d-inline-block align-text-top">
-            What Am I Playing Today ?
-        </a>
-    </div>
-    <div class="container-fluid">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.php">
+          <img src="img/Logo.jpg" alt="Logo" height=50px width=50px class="d-inline-block align-text-top">
+          What Am I Playing Today ?
+          </a>
+        </div>
+      <div class="container-fluid">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item active">
                 <a class="navbar-brand" href="index.php">ACCUEIL</a>

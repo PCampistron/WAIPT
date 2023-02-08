@@ -19,26 +19,30 @@
   </header>
       <main>
     <div class="container">
-    <h1> Page de connexion </h1>
+      <div class="p-3 text-primary-emphasis red-primary rounded-3">
+      Connexion
+      </div>
 
 
 
-    <form method="post" action="confirmerConnexion.php" class="conn">
+      <form method="post" action="confirmerConnexion.php" class="conn">
+
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword">
+          </div>
+        </div>
+
+      <input type="submit" value="Se connecter">
 
     <div>
-    <label for="Identifiant">Identifiant:</label>
-    <input type="text" id="identifiant" name="identifiant" placeholder="Miggy064" required="" autofocus="">
-</div>
-<div>
-    <label for="Mdp"> Mot de passe (minimum 8 caractères):</label>
-    <input type="password" id="mdp" name="mdp" placeholder="**********"
-           minlength="8" required>
-</div>
-
-<input type="submit" value="Se connecter">
-
-<div>
-<br> <br>
-  Pas de compte ? <br>
-  <a href ="creationCompte.php"> Créer un compte </a>
-</div>
+    <br> <br>
+      Pas de compte ? <br>
+      <a href ="creationCompte.php"> Créer un compte </a>
+    </div>
+    </div>
