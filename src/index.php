@@ -48,7 +48,7 @@
             </button>
           </li>
         </ul>
-        <button class="btn btn-outline-success" type="submit">Se connecter</button>
+        <a class="btn btn-outline-success" type="button" href="connexion.php">Se connecter</a>
       </div>
     </nav>
   </header>
@@ -110,6 +110,10 @@
       include "Jeu.php";
       include "TraiterBD.php";
 
+      
+
+  
+
       if(isset($_POST['random_button']))
       {
           $traiter = new TraiterBD();
@@ -122,9 +126,10 @@
           {
             $chaineGenres = $chaineGenres . " " . $genre;
           }
+         
           include "afficherJeu.php";
-      }
 
+      }
       if(isset($_POST['random_button_gouts']))
       {
           $traiter = new TraiterBD();
