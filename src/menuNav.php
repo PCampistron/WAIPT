@@ -5,7 +5,7 @@
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index.php">
           <img src="img/Logo.jpg" alt="Logo" height=50px width=50px class="d-inline-block align-text-top">
           What Am I Playing Today ?
           </a>
