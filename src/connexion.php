@@ -26,50 +26,25 @@
     </header>
     <main>
         <div class="container">
-            <div class="p-3 text-primary-emphasis red-primary rounded-3">
-                Connexion
+            <div>
+                <h1>Connexion</h1>
             </div>
 
-
-
-            <form method="post" action="confirmerConnexion.php" class="conn">
-
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                        placeholder="name@example.com">
+            <form class="row g-3">
+                <div class="mb-3 row">
+                    <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Email address</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                    </div>
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 row">
                     <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
                     <div class="col-sm-10">
                         <input type="password" class="form-control" id="inputPassword">
                     </div>
                 </div>
-
-                <input type="submit" value="Se connecter">
-
-                <div>
-                    <br> <br>
-                    Pas de compte ? <br>
-                    <a href="creationCompte.php"> Créer un compte </a>
-                </div>
+            </form>
         </div>
-
-        <!-- <form class="row g-3">
-  <div class="col-auto">
-    <label for="staticEmail2" class="visually-hidden">Email</label>
-    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
-  </div>
-  <div class="col-auto">
-    <label for="inputPassword2" class="visually-hidden">Password</label>
-    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-  </div>
-  <div class="col-auto">
-    <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
-  </div>
-</form> -->
-
     </main>
 </body>
-
-</html>

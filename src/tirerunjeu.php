@@ -20,7 +20,7 @@ $nom_genre = $genres[0]['nom'];
 echo '<button id="random_button"> Tirage aléatoire</button>';
 echo '<div id="result" style="display: none;">';
 echo '<p>Nom du jeu : ' . $nom_jeu . '</p>';
-echo '<img src="img/'.$id_jeu.'_carre.jpg" height="200" width="220" alt="Pochette" class="Pochette">';
+echo '<img src="img/'.$id_jeu.'_carre.png" alt="Pochette" class="Pochette">';
 echo '<p>Genre : ' . $nom_genre . '</p>';
 echo '<p>Prix : ' . $prix_jeu . '  €</p>';
 
