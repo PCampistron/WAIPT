@@ -13,60 +13,20 @@
     </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" style="text/css" href="style.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
 
     <title>WAIPT</title>
-
-    <header>
-      <?php
-        include "menuNav.php";
-      ?>
-    </header>
-
 
 </head>
 
 <body>
 
-    <!--
-    <form action="recherche.php" method="POST">
-      <input type="text" name="query"/>
-
-        <p>Premier critère :</p>
-        <input type="radio" name="crit1" onmouseup="activerCrit2()" value="dateSortie">
-        <label for="dateSortie">Date de sortie</label><br>
-        <input type="radio" name="crit1" onmouseup="activerCrit2()"  value="nbUtilisateur">
-        <label for="nbUtilisateur">Nombre d'utilisateurs</label><br>
-        <input type="radio" name="crit1" onmouseup="activerCrit2()"  value="nbDefi">
-        <label for="nbDefi">Nombre de défis</label>
-
-        <br>  
-
-        <p>Second critère :</p>
-        <input type="radio" name="crit2" id="bouton4" onmouseup="activerCrit3()" value="dateSortie" disabled>
-        <label for="dateSortie">Date de sortie</label><br>
-        <input type="radio" name="crit2" id="bouton5" onmouseup="activerCrit3()" value="nbUtilisateur" disabled>
-        <label for="nbUtilisateur">Nombre d'utilisateurs</label><br>
-        <input type="radio" name="crit2" id="bouton6" onmouseup="activerCrit3()" value="nbDefi" disabled>
-        <label for="nbDefi">Nombre de défis</label>
-
-        <br>  
-
-        <p>Troisième critère :</p>
-        <input type="radio" name="crit3" id="bouton7" value="dateSortie" disabled>
-        <label for="dateSortie">Date de sortie</label><br>
-        <input type="radio" name="crit3" id="bouton8" value="nbUtilisateur" disabled>
-        <label for="nbUtilisateur">Nombre d'utilisateurs</label><br>
-        <input type="radio" name="crit3" id="bouton9" value="nbDefi" disabled>
-        <label for="nbDefi">Nombre de défis</label>
-
-        <br><br><br>
-
-        <input type="submit" value="Rechercher">
-    </form>
-  -->
-
+  <header>
+    <?php
+      include "menuNav.php";
+    ?>
+  </header>
 
     <div class="container">
         <img src="" class="img-fluid" alt="...">

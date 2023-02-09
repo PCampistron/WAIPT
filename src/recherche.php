@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" style="text/css" href="style.css" />
     <title>WAIPT</title>
+</head>
 
-    
+<body>
     <header>
-      <?php
+        <?php
         include "menuNav.php";
       ?>
-  </header>
-  <main>
-    <div class="container">
-    <h1> Resultat de recherche : </h1>
+    </header>
 
-<?php
+    <main>
+        <div class="container">
+            <h1> Resultat de recherche : </h1>
+
+            <?php
     include_once "TraiterBD.php";
     include "connDb.php";
 
@@ -92,3 +95,7 @@
      }
 
 ?>
+    </main>
+</body>
+
+</html>

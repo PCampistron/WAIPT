@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,41 +8,17 @@
     <link rel="stylesheet" style="text/css" href="style.css" />
     <script src="script.js"></script>
     <title>WAIPT</title>
+</head>
 
-    
+<body>
     <header>
-    <div id="gauche">
-        <a href="index.php">
-          <img src="img/Logo.jpg" alt="logo" height=50px width=50px>
-        </a>
-         <titre> What Am I Playing Today ? </titre>
-      </div>
-      <div id="centre">
-        <nav>
-          <ul>
-            <li>
-              <a href="catalogue.php">
-                Catalogue
-              </a>
-            </li>
-            <li>
-              <a href="classement.php">
-                Classement
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div id="droite">
-     <form  action="connexion.php" method="post">
-    <input type="submit" value="Se connecter">
-    </form>
-      </div>
+        <?php
+    include "menuNav.php";
+  ?>
+    </header>
+    <main>
 
-  </header>
-  <main>
-    
-<?php
+        <?php
   // Établit la connexion à la base de données
   include "connDb.php";
 
@@ -68,3 +45,8 @@
     echo '<p class="info_desc"> Liste des defis : ' . $row['intitule'];
    }
  ?>
+
+    </main>
+</body>
+
+</html>

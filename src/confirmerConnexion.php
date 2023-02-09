@@ -25,4 +25,6 @@ if (isset($_POST['mdp']) && isset($_POST['identifiant']))
 else {
     echo 'Veuillez remplir tout les champs !';
 }
+
+?>
     
