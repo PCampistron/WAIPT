@@ -46,7 +46,7 @@ include "connDb.php";
     echo '<div class="presentation">';
     echo '<h3>' . $row['nom_jeu'] ;
     //CREATION D'ICONES
-    echo '<img src="img/'.$row['id_jeu'].'_carre.jpg" height="180" width="220" alt="Pochette" class="Pochette">';
+    echo '<img src="img/'.$row['id_jeu'].'_carre.png" height="20%" width="10%" alt="Pochette" class="Pochette">';
     echo '<p class="prix" > Prix : ' . $row['prixConseille'] . ' €</p>';
     echo '</article>';
 }

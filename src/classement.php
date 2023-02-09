@@ -114,7 +114,7 @@
       // affciher le rang du jeu
       echo '<h3> ' . $i . ' :' . $row['nom_jeu'] . ' </h3>' ;
       //afficher l'image
-      echo '<img src="img/'.$row['id_jeu'].'_carre.jpg" height="20%" width="10%" alt="Pochette">';
+      echo '<img src="img/'.$row['id_jeu'].'_carre.png"  alt="Pochette">';
       echo '</article>';
    }
 ?>
