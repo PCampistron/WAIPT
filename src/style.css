@@ -8,14 +8,14 @@ header{
 }
 
 .parent {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
 }
-  
-.div1 { grid-area: 1 / 1 / 2 / 6; }
-.div2 { grid-area: 2 / 2 / 6 / 5; }
-.div3 { grid-area: 2 / 1 / 6 / 2; }
-.div4 { grid-area: 2 / 5 / 6 / 6; }
+
+.haut { grid-area: 1 / 1 / 2 / 6; }
+.centre { grid-area: 2 / 2 / 6 / 5; }
+.gauche { grid-area: 2 / 1 / 6 / 2; }
+.droite { grid-area: 2 / 5 / 6 / 6; }
