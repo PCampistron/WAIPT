@@ -34,6 +34,7 @@
             <h1>Tirer un jeu au hasard</h1>
         </div>
     </div>
+    
 
     <?php
       include "connDb.php";
