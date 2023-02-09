@@ -90,7 +90,7 @@
 
           foreach($jeu->getGenres() as $genre)
           {
-            $chaineGenres = $chaineGenres . " " . $genre;
+            $chaineGenres = $chaineGenres . " -" . $genre;
           }
           include "afficherJeu.php";
       }
@@ -104,7 +104,7 @@
 
           foreach($jeu->getGenres() as $genre)
           {
-            $chaineGenres = $chaineGenres . " " . $genre;
+            $chaineGenres = $chaineGenres . " -" . $genre;
           }
           include "afficherJeu.php";
       }
