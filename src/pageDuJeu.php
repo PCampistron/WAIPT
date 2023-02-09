@@ -38,7 +38,7 @@
  foreach ($results as $row) { 
   echo '<article class="cd">';
    echo '<div class="presentation">'; 
-   echo '<img src="img/'. $row['id_jeu'].'_carre.jpg" height="400" width="420" alt="Pochette" class="Pochette">'; 
+   echo '<img src="img/'. $row['id_jeu'].'_carre.png" alt="Pochette" class="Pochette">'; 
    echo '<h3 class="titre_desc"> Nom du jeu : ' . $row['nom_jeu']; 
    echo '<p class="info_desc"> Prix Conseille : ' . $row['prixConseille'] . ' €</p>';
     echo '<p class="info_desc"> Lien magasin : <a href='. $row['lienMagasin'] .'> Page du jeu </a href>'; 
