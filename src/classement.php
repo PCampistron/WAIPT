@@ -25,7 +25,6 @@
     ?>
     </header>
     <main>
-        <div class="container">
             <h1> Classement </h1>
 
             <?php

@@ -22,13 +22,13 @@
 
 <body>
 
-  <header>
-    <?php
+    <header>
+        <?php
       include "menuNav.php";
     ?>
-  </header>
+    </header>
 
-    <div class="container">
+    <div class="p-3 mb-2 bg-primary-subtle text-emphasis-primary">
         <img src="" class="img-fluid" alt="...">
         <div class="text">
             <h1>Tirer un jeu au hasard</h1>
@@ -74,7 +74,7 @@
       echo '<input type="submit" name="random_button_gouts" value="Tirage aléatoire selon vos gouts"></button>';
       echo '</form>';
     ?>
-
+    </div>
 </body>
 
 </html>
