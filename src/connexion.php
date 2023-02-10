@@ -26,6 +26,7 @@
       ?>
     </header>
     <main>
+        
         <div class="parent">
 
             <div class="gauche">
@@ -40,6 +41,7 @@
                         <h1>Connexion</h1>
                         <br>
                     </div>
+                     <div class="formulaire_connexion">
                     <form>
 
                         <h1 class="h3 mb-3 fw-normal"> Veuillez rentrer vos informations de connexion</h1>
@@ -56,7 +58,7 @@
                         </div>
 
                         <div class="msg_crercompte">
-
+    
                             <h6> Pas de compte ? <a href="creationCompte.php"> Créer un compte </a> </h6>
                             <br>
                         </div>
@@ -64,6 +66,7 @@
                         <button class="w-100 btn btn-lg btn-primary" type="submit">Se connecter</button>
                         <p class="mt-5 mb-3 text-muted">© 2023 - WaiptTeam</p>
                     </form>
+                </div>
                 </div>
 
             </div>
