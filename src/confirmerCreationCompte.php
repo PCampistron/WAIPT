@@ -4,19 +4,19 @@ include "connDb.php";
 // Attempt insert query execution
 try {
   // Récupération des valeurs des champs de saisie
-  $identifiant = $_POST['identifiant'];
-  $motDePasse = $_POST['mdp'];
-  $email = $_POST['mail'];
+  $pseudo = $_POST['identifiant'];
+  $mdp = $_POST['mdp'];
+  $mail = $_POST['mail'];
   $dateInscription  = date("Y-m-d");
-  var_dump($dateInscription);
   $xpQuantite = 0;
-  $id_utilisateur = 'U52';
+  $id_utilisateur = 'U524';
   $types = 'utilisateur';
 
 
   // Préparation de la requête d'insertion
   $insertion = "INSERT INTO UTILISATEUR (id_utilisateur, pseudo, mdp, mail, types, xpQuantite, dateInscription) VALUES (:id_utilisateur, :pseudo, :mdp, :mail, :types, :xpQuantite, :dateInscription)";
   $requete = $db->prepare($insertion);
+  
   
   // Bind des valeurs
   $requete->bindParam(':id_utilisateur',$id_utilisateur);
@@ -32,6 +32,7 @@ try {
 
   // Message de succès
   echo "Le compte a été créé avec succès.";
+  
 } catch(PDOException $e) {
   die("ERROR: Could not able to execute $insertion. " . $e->getMessage());
 }
