@@ -44,27 +44,28 @@
                     </div>
                 </div>
                 <div class="g-col-6">
-                    <?php
-            include "connDb.php";
-            include "Jeu.php";
-            include "TraiterBD.php";
+                <?php
+                include "connDb.php";
+                include "Jeu.php";
+                include "TraiterBD.php";
 
-            if(isset($_POST['random_button']))
-            {
-                $traiter = new TraiterBD();
-
-                $jeu = $traiter->tirerJeu();
-
-                $chaineGenres = "";
-
-                foreach($jeu->getGenres() as $genre)
+                if(isset($_POST['random_button']))
                 {
-                    $chaineGenres = $chaineGenres . " -" . $genre;
+                    $traiter = new TraiterBD();
+
+                    $jeu = $traiter->tirerJeu();
+
+                    $chaineGenres = "";
+
+                    foreach($jeu->getGenres() as $genre)
+                    {
+                        $chaineGenres = $chaineGenres . " #" . $genre;
+                    }
+                    include "afficherJeu.php";
                 }
-                include "afficherJeu.php";
-            }
-            if(isset($_POST['random_button_gouts']))
-            {
+
+                if(isset($_POST['random_button_gouts']))
+                {
                 $traiter = new TraiterBD();
 
                 $jeu = $traiter->tirerJeuGouts();
@@ -73,19 +74,17 @@
 
                 foreach($jeu->getGenres() as $genre)
                 {
-                    $chaineGenres = $chaineGenres . " -" . $genre;
+                    $chaineGenres = $chaineGenres . " #" . $genre;
                 }
-                
                 include "afficherJeu.php";
-               
-            }
-            echo '<div class="d-grid gap-2 d-md-block">';
-            echo '<form action="index.php" method="POST">'  ;
-            echo '<input class="btn btn-primary" type="submit" name="random_button" value="Tirage aléatoire"></input>';
-            echo '<input class="btn btn-primary" type="submit" name="random_button_gouts" value="Tirage aléatoire selon vos gouts"></input>';
-            echo '</form>';
-            echo '</div>';
-        ?>
+                }
+                echo '<div class="d-grid gap-2 d-md-block">';
+                echo '<form action="index.php" method="POST">'  ;
+                echo '<input class="btn btn-primary" type="submit" name="random_button" value="Tirage aléatoire"></input>';
+                echo '<input class="btn btn-primary" type="submit" name="random_button_gouts" value="Tirage aléatoire selon vos gouts"></input>';
+                echo '</form>';
+                echo '</div>';
+                ?>
                 </div>
 
             </div>
@@ -95,6 +94,7 @@
         <div class="droite">
 
         </div>
+
     </div>
 </body>
 
