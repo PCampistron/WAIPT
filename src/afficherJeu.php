@@ -9,7 +9,17 @@
   <ul class="list-group list-group-flush">
     <li class="list-group-item">' . $jeu->getPrixConseille() . ' €</li>
     <li class="list-group-item">' . $chaineGenres . '</li>
-    <li class="list-group-item">Plateforme</li>
+    <li class="list-group-item"> <p>Plateforme :</p> ';
+
+    $listePlateformes = $jeu->getPlateformes();
+
+    foreach($listePlateformes as $plateforme)
+    {
+      echo '<a href="' . $plateforme[1] . '">' . $plateforme[0] . ' </a>';
+    }
+    
+  echo '
+  </li>
   </ul>
   <div class="card-body">
     <a href="pageDuJeu.php?id=' . $jeu->getIdJeu() .'" class="card-link">Page du jeu</a>

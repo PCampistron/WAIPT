@@ -56,7 +56,9 @@
                     {
                         $chaineGenres = $chaineGenres . " #" . $genre;
                     }
-                    include "afficherJeu.php";
+
+
+                    include ("afficherJeu.php");
                 }
 
                 if(isset($_POST['random_button_gouts']))
@@ -71,7 +73,7 @@
                 {
                     $chaineGenres = $chaineGenres . " #" . $genre;
                 }
-                include "afficherJeu.php";
+                include ("afficherJeu.php");
                 }
                 echo '</div>';
                 echo '<div class="d-grid gap-2 d-md-block">';

@@ -33,6 +33,8 @@ class Jeu
      */
     private array $genres;
 
+    private array $plateformes;
+
     // CONSTRUCTEUR
 
     /**
@@ -46,12 +48,14 @@ class Jeu
     public function __construct(string $nom, 
                                 string $idJeu,
                                 float $prixConseille,
-                                $genres)
+                                $genres,
+                                $plateformes)
     {
         $this->nom = $nom;
         $this->idJeu = $idJeu;
         $this->prixConseille = $prixConseille;
         $this->genres = $genres;
+        $this->plateformes = $plateformes;
     }
 
     // ENCAPSULATION
@@ -135,7 +139,26 @@ class Jeu
     {
         $this->genres = $genres;
     }
-}
 
+    /**
+    * @brief Getter de la variable plateformes
+    * 
+    * @return un dictionnaire de plateformes, chaque plateforme possède un nom et un lien vers le magasin.
+    */
+    public function getPlateformes()
+    {
+        return $this->plateformes;
+    }
+
+    /**
+    * @brief Getter de la variable plateformes
+    * 
+    * @param [in] plateformes dictionnaire de plateformes
+    */
+    public function setPlateformes($plateformes)
+    {
+        $this->plateformes = $plateformes;
+    }
+}
 
 ?>

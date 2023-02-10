@@ -109,7 +109,22 @@
                 array_push($listeGenres, $row['nom']);
             }
 
-            $jeu = new Jeu($nom_jeu, $id_jeu, $prix_jeu, $listeGenres);
+             // Récupération des plateformes du jeu tiré
+
+             $plateformes = $db->prepare("SELECT j.id_jeu, j.nom_plateforme, j.lienMagasin FROM JEUPLATEFORME j WHERE j.id_jeu = '$id_jeu'");
+             $plateformes->execute();
+             $plateformes = $plateformes->fetchAll();
+             
+             $listePlateformes = array();
+ 
+             foreach ($plateformes as $row) {
+                 $plateforme = array($row['nom_plateforme'], $row['lienMagasin']);
+                 array_push($listePlateformes, $plateforme);
+             }
+ 
+             // Création de l'objet jeu
+
+            $jeu = new Jeu($nom_jeu, $id_jeu, $prix_jeu, $listeGenres, $listePlateformes);
 
             return $jeu;
         }
@@ -149,7 +164,21 @@
                 array_push($listeGenres, $row['nom']);
             }
 
-            $jeu = new Jeu($nom_jeu, $id_jeu, $prix_jeu, $listeGenres);
+            // Récupération des plateformes du jeu tiré
+
+            $plateformes = $db->prepare("SELECT j.id_jeu, j.nom_plateforme, j.lienMagasin FROM JEUPLATEFORME j WHERE j.id_jeu = '$id_jeu'");
+             $plateformes->execute();
+             $plateformes = $plateformes->fetchAll();
+             
+             $listePlateformes = array();
+ 
+             foreach ($plateformes as $row) {
+                 $plateforme = array($row['nom_plateforme'], $row['lienMagasin']);
+                 array_push($listePlateformes, $plateforme);
+             }
+            // Création de l'objet jeu
+
+            $jeu = new Jeu($nom_jeu, $id_jeu, $prix_jeu, $listeGenres, $listePlateformes);
 
             return $jeu;
         }
