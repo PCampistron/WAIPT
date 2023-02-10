@@ -43,8 +43,7 @@
                     <div class="col-sm-10">
                         <input type="password" class="form-control" id="inputPassword">
                     </div>
-                </div>
-                
+                </div>  
             </form>
         </div>
     </main>
