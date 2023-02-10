@@ -29,7 +29,7 @@
     </header>
 
     <div class="p-3 mb-2 bg-primary-subtle text-emphasis-primary">
-        <img src="" class="img-fluid" alt="...">
+        <img src="img/tirageRandom.gif" class="img-fluid" alt="...">
         <div class="text">
             <h1>Tirer un jeu au hasard</h1>
         </div>
