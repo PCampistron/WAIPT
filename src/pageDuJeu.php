@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +7,17 @@
     <link rel="stylesheet" style="text/css" href="style.css" />
     <script src="script.js"></script>
     <title>WAIPT</title>
-</head>
 
-<body>
-    <header>
-        <?php
-    include "menuNav.php";
-  ?>
-    </header>
-    <main>
-
-        <?php
+    
+  <header>
+    <?php
+      include "menuNav.php";
+    ?>
+    
+  </header>
+  <main>
+    
+<?php
   // Établit la connexion à la base de données
   include "connDb.php";
 
@@ -32,7 +31,7 @@
  WHERE j.id_jeu = '$id_jeu'"); 
  $requete -> execute(); 
  $results= $requete->fetchAll(); 
- 
+ var_dump($results) ;
 
  // Parcoure chaque ligne du résultat et affiche les données du jeu 
  foreach ($results as $row) { 
@@ -45,8 +44,3 @@
     echo '<p class="info_desc"> Liste des defis : ' . $row['intitule'];
    }
  ?>
-
-    </main>
-</body>
-
-</html>

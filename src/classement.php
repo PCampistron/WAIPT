@@ -117,6 +117,7 @@
       echo '<img src="img/jeux/'.$row['id_jeu'].'_carre.png"  alt="Pochette">';
       echo '</article>';
    }
+   
 ?>
     </main>
 </body>
