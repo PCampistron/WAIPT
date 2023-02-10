@@ -3,7 +3,9 @@
   padding: 0;
 }
 
-html, body{height:100%;} 
+html, body{
+  height:100%;
+} 
 
 header > nav{
   background-color:#351c75;
