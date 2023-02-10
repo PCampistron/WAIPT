@@ -38,13 +38,6 @@
 
             <div class="grid text-center">
 
-                <div class="g-col-6">
-                    <img src="img/waipt/tirageRandom.gif" class="img-fluid" alt="...">
-                    <div class="text">
-                        <h1>Tirer un jeu au hasard</h1>
-                    </div>
-                </div>
-                <div class="g-col-6">
                 <div class="g-col-6 d-flex justify-content-center">
                 <?php
                 include "connDb.php";
