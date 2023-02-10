@@ -32,7 +32,7 @@
  WHERE j.id_jeu = '$id_jeu'"); 
  $requete -> execute(); 
  $results= $requete->fetchAll(); 
- var_dump($results) ;
+ 
 
  // Parcoure chaque ligne du résultat et affiche les données du jeu 
  foreach ($results as $row) { 
