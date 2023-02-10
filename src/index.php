@@ -38,7 +38,7 @@
             <div class="grid text-center">
 
                 <div class="g-col-6">
-                    <img src="img/tirageRandom.gif" class="img-fluid" alt="...">
+                    <img src="img/waipt/tirageRandom.gif" class="img-fluid" alt="...">
                     <div class="text">
                         <h1>Tirer un jeu au hasard</h1>
                     </div>
