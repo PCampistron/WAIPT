@@ -21,6 +21,7 @@
 <body>
     <header>
         <?php
+        $categoriePage = "CONNEXION";
         include "menuNav.php";
       ?>
     </header>

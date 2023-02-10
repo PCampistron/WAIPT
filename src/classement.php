@@ -21,13 +21,21 @@
 
     <header>
         <?php
-      include "menuNav.php";
-    ?>
+        $categoriePage = "CLASSEMENT";
+        include ('menuNav.php');
+        ?>
     </header>
     <main>
-        <h1> Classement </h1>
 
-        <?php
+        <div class="parent">
+            <div class="gauche">
+
+            </div>
+
+            <div class="centre">
+                <h1> Classement </h1>
+
+                <?php
    include "connDb.php"; // Connexion à la BD
 
    // 1 Extraction des données de calcul
@@ -141,39 +149,47 @@
         //     </div>';
    }
    ?>
-        <!-- <table class="table">
-    <thead>
-        <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nom</th>
-        <th scope="col">Image</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-        <th scope="row">1</th>
-        foreach ($results as $row) {
-            echo '<td> ' . $row['nom_jeu'] . '</td>'
-            echo '<img src="img/jeux/'.$row['id_jeu'].'_carre.png"  alt="Pochette">';
+    //     <!-- <table class="table">
+    // <thead>
+    //     <tr>
+    //     <th scope="col">#</th>
+    //     <th scope="col">Nom</th>
+    //     <th scope="col">Image</th>
+    //     </tr>
+    // </thead>
+    // <tbody>
+    //     <tr>
+    //     <th scope="row">1</th>
+    //     foreach ($results as $row) {
+    //         echo '<td> ' . $row['nom_jeu'] . '</td>'
+    //         echo '<img src="img/jeux/'.$row['id_jeu'].'_carre.png"  alt="Pochette">';
             
            
-        }
-        </tr>
+    //     }
+    //     </tr>
         
-        <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        </tr>
-        <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-        </tr>
-    </tbody>
-    </table> -->
+    //     <tr>
+    //     <th scope="row">2</th>
+    //     <td>Jacob</td>
+    //     <td>Thornton</td>
+    //     <td>@fat</td>
+    //     </tr>
+    //     <tr>
+    //     <th scope="row">3</th>
+    //     <td colspan="2">Larry the Bird</td>
+    //     <td>@twitter</td>
+    //     </tr>
+    // </tbody>
+    // </table> -->
 
+
+            </div>
+
+            <div class="droite">
+
+            </div>
+
+        </div>
 
     </main>
 </body>
