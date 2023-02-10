@@ -20,15 +20,23 @@
 <body>
     <header>
         <?php
-      include "menuNav.php";
-    ?>
+        $categoriePage = "CATALOGUE";
+        include "menuNav.php";
+        ?>
     </header>
 
     <main>
-        <div class="container">
-            <h1> Catalogue </h1>
 
-            <?php
+        <div class="parent">
+            <div class="gauche">
+
+            </div>
+
+            <div class="centre">
+
+                    <h1> Catalogue </h1>
+
+                    <?php
 include "connDb.php";
 
 
@@ -52,6 +60,13 @@ include "connDb.php";
 }
 
 ?>
+
+            </div>
+
+            <div class="droite">
+
+            </div>
+        </div>
     </main>
 </body>
 

@@ -24,8 +24,9 @@
 
     <header>
         <?php
-      include "menuNav.php";
-    ?>
+        $categoriePage = "ACCUEIL";
+        include ('menuNav.php');
+        ?>
     </header>
 
     <div class="parent">
@@ -44,6 +45,7 @@
                     </div>
                 </div>
                 <div class="g-col-6">
+                <div class="g-col-6 d-flex justify-content-center">
                 <?php
                 include "connDb.php";
                 include "Jeu.php";
@@ -78,6 +80,7 @@
                 }
                 include "afficherJeu.php";
                 }
+                echo '</div>';
                 echo '<div class="d-grid gap-2 d-md-block">';
                 echo '<form action="index.php" method="POST">'  ;
                 echo '<input class="btn btn-primary" type="submit" name="random_button" value="Tirage aléatoire"></input>';
@@ -85,8 +88,7 @@
                 echo '</form>';
                 echo '</div>';
                 ?>
-                </div>
-
+                
             </div>
 
         </div>
