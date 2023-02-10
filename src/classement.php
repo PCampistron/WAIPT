@@ -21,13 +21,21 @@
 
     <header>
         <?php
-      include "menuNav.php";
-    ?>
+        $categoriePage = "CLASSEMENT";
+        include ('menuNav.php');
+        ?>
     </header>
     <main>
-            <h1> Classement </h1>
 
-            <?php
+        <div class="parent">
+            <div class="gauche">
+
+            </div>
+
+            <div class="centre">
+                <h1> Classement </h1>
+
+                <?php
    include "connDb.php"; // Connexion à la BD
 
    // 1 Extraction des données de calcul
@@ -119,6 +127,15 @@
    }
    
 ?>
+
+            </div>
+
+            <div class="droite">
+
+            </div>
+
+        </div>
+
     </main>
 </body>
 
