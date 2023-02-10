@@ -22,18 +22,19 @@
 
 <body>
 
-  <header>
-    <?php
+    <header>
+        <?php
       include "menuNav.php";
     ?>
-  </header>
+    </header>
 
-    <div class="container">
+    <div class="p-3 mb-2 bg-primary-subtle text-emphasis-primary">
         <img src="" class="img-fluid" alt="...">
         <div class="text">
             <h1>Tirer un jeu au hasard</h1>
         </div>
     </div>
+    
 
     <?php
       include "connDb.php";
@@ -68,13 +69,14 @@
           }
           include "afficherJeu.php";
       }
-
+      echo '<div class="d-grid gap-2 d-md-block">';
       echo '<form action="index.php" method="POST">'  ;
-      echo '<input type="submit" name="random_button" value="Tirage aléatoire"></button>';
-      echo '<input type="submit" name="random_button_gouts" value="Tirage aléatoire selon vos gouts"></button>';
+      echo '<input class="btn btn-primary" type="submit" name="random_button" value="Tirage aléatoire"></input>';
+      echo '<input class="btn btn-primary" type="submit" name="random_button_gouts" value="Tirage aléatoire selon vos gouts"></input>';
       echo '</form>';
+      echo '</div>';
     ?>
-
+    </div>
 </body>
 
 </html>
