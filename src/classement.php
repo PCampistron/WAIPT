@@ -21,13 +21,21 @@
 
     <header>
         <?php
-      include "menuNav.php";
-    ?>
+        $categoriePage = "CLASSEMENT";
+        include ('menuNav.php');
+        ?>
     </header>
     <main>
-            <h1> Classement </h1>
 
-            <?php
+        <div class="parent">
+            <div class="gauche">
+
+            </div>
+
+            <div class="centre">
+                <h1> Classement </h1>
+
+                <?php
    include "connDb.php"; // Connexion à la BD
 
    // 1 Extraction des données de calcul
@@ -109,15 +117,80 @@
    $i = 0;
 
    foreach ($results as $row) {
-      $i++;
-      echo '<article class="caseJeu">';
-      // affciher le rang du jeu
-      echo '<h3> ' . $i . ' :' . $row['nom_jeu'] . ' </h3>' ;
-      //afficher l'image
-      echo '<img src="img/'.$row['id_jeu'].'_carre.png"  alt="Pochette">';
-      echo '</article>';
+        $i++;
+    //   echo '<article class="caseJeu">';
+    //   // affciher le rang du jeu
+    //   echo '<h3> ' . $i . ' :' . $row['nom_jeu'] . ' </h3>' ;
+    //   //afficher l'image
+    //   echo '<img src="img/jeux/'.$row['id_jeu'].'_carre.png"  alt="Pochette">';
+    //   echo '</article>';
+        echo '<table class="table">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nom</th>
+            <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>';
+    
+        echo '<th scope="row"> '.$i.' </th>';
+        echo '<td> ' . $row['nom_jeu'] . '</td>
+        <td> <img src="img/jeux/'.$row['id_jeu'].'_carre.png"  class="rounded float" alt="Pochette" style="width:20%; height:auto"> </td>
+        </tr>
+        </tbody>
+        </table>';
+        // echo '<div class="row">
+        //        <div class="col-6">
+        //           <img src="img/jeux/'.$row['id_jeu'].'_carre.png" alt="jeu" style="width:20%; height:auto">
+        //           <p>'.$i.' - '. $row['nom_jeu'] . '</p>
+        //        </div>
+        //     </div>';
    }
-?>
+   ?>
+    //     <!-- <table class="table">
+    // <thead>
+    //     <tr>
+    //     <th scope="col">#</th>
+    //     <th scope="col">Nom</th>
+    //     <th scope="col">Image</th>
+    //     </tr>
+    // </thead>
+    // <tbody>
+    //     <tr>
+    //     <th scope="row">1</th>
+    //     foreach ($results as $row) {
+    //         echo '<td> ' . $row['nom_jeu'] . '</td>'
+    //         echo '<img src="img/jeux/'.$row['id_jeu'].'_carre.png"  alt="Pochette">';
+            
+           
+    //     }
+    //     </tr>
+        
+    //     <tr>
+    //     <th scope="row">2</th>
+    //     <td>Jacob</td>
+    //     <td>Thornton</td>
+    //     <td>@fat</td>
+    //     </tr>
+    //     <tr>
+    //     <th scope="row">3</th>
+    //     <td colspan="2">Larry the Bird</td>
+    //     <td>@twitter</td>
+    //     </tr>
+    // </tbody>
+    // </table> -->
+
+
+            </div>
+
+            <div class="droite">
+
+            </div>
+
+        </div>
+
     </main>
 </body>
 

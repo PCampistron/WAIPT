@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +7,17 @@
     <link rel="stylesheet" style="text/css" href="style.css" />
     <script src="script.js"></script>
     <title>WAIPT</title>
-</head>
 
-<body>
-    <header>
-        <?php
-    include "menuNav.php";
-  ?>
-    </header>
-    <main>
-
-        <?php
+    
+  <header>
+    <?php
+      include "menuNav.php";
+    ?>
+    
+  </header>
+  <main>
+    
+<?php
   // Établit la connexion à la base de données
   include "connDb.php";
 
@@ -32,21 +31,16 @@
  WHERE j.id_jeu = '$id_jeu'"); 
  $requete -> execute(); 
  $results= $requete->fetchAll(); 
- var_dump($results) ;
+
 
  // Parcoure chaque ligne du résultat et affiche les données du jeu 
  foreach ($results as $row) { 
   echo '<article class="cd">';
    echo '<div class="presentation">'; 
-   echo '<img src="img/'. $row['id_jeu'].'_carre.png" alt="Pochette" class="Pochette">'; 
+   echo '<img src="img/jeux/'. $row['id_jeu'].'_carre.png" alt="Pochette" class="Pochette">'; 
    echo '<h3 class="titre_desc"> Nom du jeu : ' . $row['nom_jeu']; 
    echo '<p class="info_desc"> Prix Conseille : ' . $row['prixConseille'] . ' €</p>';
     echo '<p class="info_desc"> Lien magasin : <a href='. $row['lienMagasin'] .'> Page du jeu </a href>'; 
     echo '<p class="info_desc"> Liste des defis : ' . $row['intitule'];
    }
  ?>
-
-    </main>
-</body>
-
-</html>

@@ -24,56 +24,72 @@
 
     <header>
         <?php
-      include "menuNav.php";
-    ?>
+        $categoriePage = "ACCUEIL";
+        include ('menuNav.php');
+        ?>
     </header>
 
-    <div class="p-3 mb-2 bg-primary-subtle text-emphasis-primary">
-        <img src="" class="img-fluid" alt="...">
-        <div class="text">
-            <h1>Tirer un jeu au hasard</h1>
+    <div class="parent">
+        <div class="gauche">
+
         </div>
-    </div>
 
-    <?php
-      include "connDb.php";
-      include "Jeu.php";
-      include "TraiterBD.php";
+        <div class="centre">
 
-      if(isset($_POST['random_button']))
-      {
-          $traiter = new TraiterBD();
+            <div class="grid text-center">
 
-          $jeu = $traiter->tirerJeu();
+                <div class="g-col-6 d-flex justify-content-center">
+                <?php
+                include "connDb.php";
+                include "Jeu.php";
+                include "TraiterBD.php";
 
-          $chaineGenres = "";
+                if(isset($_POST['random_button']))
+                {
+                    $traiter = new TraiterBD();
 
-          foreach($jeu->getGenres() as $genre)
-          {
-            $chaineGenres = $chaineGenres . " -" . $genre;
-          }
-          include "afficherJeu.php";
-      }
-      if(isset($_POST['random_button_gouts']))
-      {
-          $traiter = new TraiterBD();
+                    $jeu = $traiter->tirerJeu();
 
-          $jeu = $traiter->tirerJeuGouts();
+                    $chaineGenres = "";
 
-          $chaineGenres = "";
+                    foreach($jeu->getGenres() as $genre)
+                    {
+                        $chaineGenres = $chaineGenres . " #" . $genre;
+                    }
+                    include "afficherJeu.php";
+                }
 
-          foreach($jeu->getGenres() as $genre)
-          {
-            $chaineGenres = $chaineGenres . " -" . $genre;
-          }
-          include "afficherJeu.php";
-      }
+                if(isset($_POST['random_button_gouts']))
+                {
+                $traiter = new TraiterBD();
 
-      echo '<form action="index.php" method="POST">'  ;
-      echo '<input type="submit" name="random_button" value="Tirage aléatoire"></button>';
-      echo '<input type="submit" name="random_button_gouts" value="Tirage aléatoire selon vos gouts"></button>';
-      echo '</form>';
-    ?>
+                $jeu = $traiter->tirerJeuGouts();
+
+                $chaineGenres = "";
+
+                foreach($jeu->getGenres() as $genre)
+                {
+                    $chaineGenres = $chaineGenres . " #" . $genre;
+                }
+                include "afficherJeu.php";
+                }
+                echo '</div>';
+                echo '<div class="d-grid gap-2 d-md-block">';
+                echo '<form action="index.php" method="POST">'  ;
+                echo '<input class="btn btn-primary" type="submit" name="random_button" value="Tirage aléatoire"></input>';
+                echo '<input class="btn btn-primary" type="submit" name="random_button_gouts" value="Tirage aléatoire selon vos gouts"></input>';
+                echo '</form>';
+                echo '</div>';
+                ?>
+                
+            </div>
+
+        </div>
+
+        <div class="droite">
+
+        </div>
+
     </div>
 </body>
 

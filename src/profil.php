@@ -20,11 +20,19 @@
 <body>
     <header>
         <?php
-        include "menuNav.php";
+        $categoriePage = "PROFIL";
+        include ("menuNav.php");
         ?>
     </header>
     <main>
-        <h1> Profil </h1>
+        <div class="parent">
+
+            <div class="gauche">
+
+            </div>
+
+            <div class="centre">
+            <h1> Profil </h1>
         <ul class="nav nav-tabs">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Mon Profil</a>
@@ -39,6 +47,16 @@
         <?php
             include "informationjoueur.php";
         ?>
+            </div>
+
+            <div class="droite">
+
+            </div>
+        
+        </div>
+
+
+        
     </main>
 </body>
 

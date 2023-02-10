@@ -20,15 +20,23 @@
 <body>
     <header>
         <?php
-      include "menuNav.php";
-    ?>
+        $categoriePage = "CATALOGUE";
+        include "menuNav.php";
+        ?>
     </header>
 
     <main>
-        <div class="container">
-            <h1> Catalogue </h1>
 
-            <?php
+        <div class="parent">
+            <div class="gauche">
+
+            </div>
+
+            <div class="centre">
+
+                    <h1> Catalogue </h1>
+
+                    <?php
 include "connDb.php";
 
 
@@ -46,12 +54,19 @@ include "connDb.php";
     echo '<div class="presentation">';
     echo '<h3>' . $row['nom_jeu'] ;
     //CREATION D'ICONES
-    echo '<img src="img/'.$row['id_jeu'].'_carre.png" height="20%" width="10%" alt="Pochette" class="Pochette">';
+    echo '<img src="img/jeux/'.$row['id_jeu'].'_carre.png" height="20%" width="10%" alt="Pochette" class="Pochette">';
     echo '<p class="prix" > Prix : ' . $row['prixConseille'] . ' €</p>';
     echo '</article>';
 }
 
 ?>
+
+            </div>
+
+            <div class="droite">
+
+            </div>
+        </div>
     </main>
 </body>
 

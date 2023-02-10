@@ -21,30 +21,39 @@
 <body>
     <header>
         <?php
+        $categoriePage = "CONNEXION";
         include "menuNav.php";
       ?>
     </header>
     <main>
         <div class="container">
             <div>
+                <br>
                 <h1>Connexion</h1>
+                <br>
             </div>
+            <form>
+    
+    <h1 class="h3 mb-3 fw-normal"> Veuillez rentrer vos informations de connexion</h1>
 
-            <form class="row g-3">
-                <div class="mb-3 row">
-                    <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Email address</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="name@example.com">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword">
-                    </div>
-                </div>
-            </form>
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+      <label for="floatingInput">Adresse mail</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required minlength="8">
+      <label for="floatingPassword">Mot de passe (8 caracères minimum)</label>
+    </div>
+
+    <div class="msg_crercompte">
+      
+  <h6> Pas de compte ? <a href ="creationCompte.php"> Créer un compte </a> </h6>
+      <br>
+    </div>
+
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Se connecter</button>
+    <p class="mt-5 mb-3 text-muted">© 2023 - WaiptTeam</p>
+  </form>
         </div>
     </main>
 </body>
