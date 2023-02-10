@@ -22,6 +22,7 @@
 <body>
     <header>
         <?php
+        $categoriePage = "CREER COMPTE";
         include "menuNav.php";
       ?>
     </header>
