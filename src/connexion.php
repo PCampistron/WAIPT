@@ -26,34 +26,53 @@
       ?>
     </header>
     <main>
-        <div class="container">
-            <div>
-                <br>
-                <h1>Connexion</h1>
-                <br>
+        <div class="parent">
+
+            <div class="gauche">
+
             </div>
-            <form>
-    
-    <h1 class="h3 mb-3 fw-normal"> Veuillez rentrer vos informations de connexion</h1>
 
-    <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-      <label for="floatingInput">Adresse mail</label>
-    </div>
-    <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" required minlength="8">
-      <label for="floatingPassword">Mot de passe (8 caracères minimum)</label>
-    </div>
+            <div class="centre">
 
-    <div class="msg_crercompte">
-      
-  <h6> Pas de compte ? <a href ="creationCompte.php"> Créer un compte </a> </h6>
-      <br>
-    </div>
+                <div class="container">
+                    <div>
+                        <br>
+                        <h1>Connexion</h1>
+                        <br>
+                    </div>
+                    <form>
 
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Se connecter</button>
-    <p class="mt-5 mb-3 text-muted">© 2023 - WaiptTeam</p>
-  </form>
+                        <h1 class="h3 mb-3 fw-normal"> Veuillez rentrer vos informations de connexion</h1>
+
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                                required>
+                            <label for="floatingInput">Adresse mail</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+                                required minlength="8">
+                            <label for="floatingPassword">Mot de passe (8 caracères minimum)</label>
+                        </div>
+
+                        <div class="msg_crercompte">
+
+                            <h6> Pas de compte ? <a href="creationCompte.php"> Créer un compte </a> </h6>
+                            <br>
+                        </div>
+
+                        <button class="w-100 btn btn-lg btn-primary" type="submit">Se connecter</button>
+                        <p class="mt-5 mb-3 text-muted">© 2023 - WaiptTeam</p>
+                    </form>
+                </div>
+
+            </div>
+
+
+            <div class="droite">
+
+            </div>
+
         </div>
     </main>
 </body>
