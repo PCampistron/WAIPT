@@ -27,28 +27,63 @@
       ?>
     </header>
     <main>
-        <div class="container">
-            <h1> Créer un compte </h1>
+        
+        <div class="parent">
 
-            <form method="post" action="confirmerCreationCompte.php" class="conn">
+            <div class="gauche">
 
-                <div>
-                    <label for="Identifiant">Identifiant:</label>
-                    <input type="text" id="identifiant" name="identifiant" placeholder="Mil8654">
-                </div>
-                <div>
-                    <label for="Mdp"> Mot de passe (minimum 8 caractères):</label>
-                    <input type="mdp" id="mdp" name="mdp" placeholder="**********" minlength="8" required>
-                </div>
-                <div>
-                    <label for="Mail">Adresse mail :</label>
-                    <input type="email" id="mail" name="mail" placeholder="Mil@exemple.com">
-                </div>
+            </div>
 
-                <input type="submit" value="Creer un compte">
+            <div class="centre">
 
+                <div class="boiteConn">
+                    <div>
+                        <br>
+                        <h1>Creation d'un compte</h1>
+                        <br>
+                    </div>
+                    <div class="formulaire_insciption">
+    <form method="post" action="confirmerCreationCompte.php" >
+
+        <h1 class="h3 mb-3 fw-normal"> Veuillez rentrer vos informations d'inscription </h1>
+
+        <div class="form-floating">
+                            <input type="email" class="form-control" id="mail" placeholder="name@example.com"
+                                required>
+                            <label for="floatingInput">Adresse mail <span class="obligatoire">*</span></label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="Identifiant" placeholder="Exemple01"
+                required>
+            <label for="floatingInput"> Identifiant <span class="obligatoire">*</span> </label>
+        </div>
+        
+        <div class="form-floating">
+            <input type="password" class="form-control" id="mdp" placeholder="Password"
+                required minlength="8">
+            <label for="floatingPassword"> Mot de passe <span class="obligatoire">*</span> (8 caractères minimum)</label>
         </div>
 
+        <div class="msg_crercompte">
+
+            <h6> Deja un compte ? <a href="connexion.php"> Se connecter </a> </h6>
+            <br>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary" type="submit"> Creer le compte </button>
+        <p class="mt-5 mb-3 text-muted">© 2023 - WaiptTeam</p>
+    </form>
+</div>
+                </div>
+
+            </div>
+
+            <div class="droite">
+
+            </div>
+
+
+        </div>
     </main>
 </body>
 

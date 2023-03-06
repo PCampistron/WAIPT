@@ -79,3 +79,7 @@ min-height: 100vh;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
+
+
+.boiteConn { padding : 8%;}
+.obligatoire {color: red;}

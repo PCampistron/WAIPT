@@ -35,7 +35,7 @@
 
             <div class="centre">
 
-                <div class="container">
+                <div class="boiteConn">
                     <div>
                         <br>
                         <h1>Connexion</h1>
@@ -49,13 +49,13 @@
                         <div class="form-floating">
                             <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
                                 required>
-                            <label for="floatingInput">Adresse mail</label>
+                            <label for="floatingInput">Adresse mail <span class="obligatoire">*</span></label>
                         </div>
 
                         <div class="form-floating">
                             <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
                                 required minlength="8">
-                            <label for="floatingPassword">Mot de passe (8 caracères minimum)</label>
+                            <label for="floatingPassword">Mot de passe <span class="obligatoire">*</span> (8 caractères minimum)</label>
                         </div>
 
                         <div class="msg_crercompte">
@@ -65,7 +65,7 @@
                         </div>
 
                         <button class="w-100 btn btn-lg btn-primary" type="submit">Se connecter</button>
-                        <p class="mt-5 mb-3 text-muted">© 2023 - WaiptTeam</p>
+                        <p class="mt-5 mb-3 text-muted" >© 2023 - WaiptTeam</p>
                     </form>
                 </div>
                 </div>
