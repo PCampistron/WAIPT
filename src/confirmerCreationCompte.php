@@ -5,7 +5,7 @@ include "connDb.php";
 try {
   // Récupération des valeurs des champs de saisie
   $pseudo = $_POST['identifiant'];
-  $mdp = $_POST['mdp'];
+  $mdp = php_crypt($_POST['mdp']);
   $mail = $_POST['mail'];
   $dateInscription  = date("Y-m-d");
   $xpQuantite = 0;

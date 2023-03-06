@@ -49,6 +49,7 @@
                                 required>
                             <label for="floatingInput">Adresse mail</label>
                         </div>
+
                         <div class="form-floating">
                             <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
                                 required minlength="8">
@@ -68,10 +69,10 @@
 
             </div>
 
-
             <div class="droite">
 
             </div>
+
 
         </div>
     </main>

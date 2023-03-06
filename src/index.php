@@ -29,17 +29,18 @@
         ?>
     </header>
 
-    <div class="parent">
-        <div class="gauche">
+    <main>
+        <div class="parent">
+            <div class="gauche">
 
-        </div>
+            </div>
 
-        <div class="centre">
+            <div class="centre">
 
-            <div class="grid text-center">
+                <div class="grid text-center">
 
-                <div class="g-col-6 d-flex justify-content-center">
-                <?php
+                    <div class="g-col-6 d-flex justify-content-center">
+                        <?php
                 include "connDb.php";
                 include "Jeu.php";
                 include "TraiterBD.php";
@@ -83,16 +84,17 @@
                 echo '</form>';
                 echo '</div>';
                 ?>
-                
+
+                    </div>
+
+                </div>
+
+                <div class="droite">
+
+                </div>
+
             </div>
-
-        </div>
-
-        <div class="droite">
-
-        </div>
-
-    </div>
+    </main>
 </body>
 
 </html>

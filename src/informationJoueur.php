@@ -49,7 +49,6 @@
                 echo '</div>';
                 echo '</div>';
                 echo '</div>';
-                echo '</div>';
             }
         ?>
     </main>
