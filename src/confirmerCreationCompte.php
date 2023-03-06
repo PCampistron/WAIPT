@@ -1,17 +1,23 @@
 <?php
 include "connDb.php";
+include "TraiterBD.php";
 
 // Attempt insert query execution
 try {
+  //Recuperation d'un nouvel id d'utilisateur a implementer
+  $traiter = new TraiterBD();
+  $id = $traiter->incrementation_id();
+ 
   // Récupération des valeurs des champs de saisie
   $pseudo = $_POST['identifiant'];
   $mdp = $_POST['mdp'];
   $mail = $_POST['mail'];
   $dateInscription  = date("Y-m-d");
   $xpQuantite = 0;
-  $id_utilisateur = 'U954';
+  $id_utilisateur = $id;
   $types = 'utilisateur';
 
+  
 
   // Préparation de la requête d'insertion
   $insertion = "INSERT INTO UTILISATEUR (id_utilisateur, pseudo, mdp, mail, types, xpQuantite, dateInscription) VALUES (:id_utilisateur, :pseudo, :mdp, :mail, :types, :xpQuantite, :dateInscription)";
