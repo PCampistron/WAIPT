@@ -9,7 +9,7 @@ try {
   $mail = $_POST['mail'];
   $dateInscription  = date("Y-m-d");
   $xpQuantite = 0;
-  $id_utilisateur = 'U924';
+  $id_utilisateur = 'U954';
   $types = 'utilisateur';
 
 

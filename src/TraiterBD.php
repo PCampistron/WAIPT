@@ -143,7 +143,7 @@
             JOIN GENRE g on g.id_genre = c.id_genre 
             JOIN GOUTS gou on gou.id_genre = g.id_genre
             JOIN UTILISATEUR u on u.id_utilisateur = gou.id_utilisateur
-            WHERE u.id_utilisateur = 'U102'
+            WHERE u.id_utilisateur = 'U000001'
             ORDER BY RAND() LIMIT 1");
             $requete->execute();
             $results = $requete->fetchAll();

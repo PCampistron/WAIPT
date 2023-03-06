@@ -49,19 +49,19 @@
 
         <div class="form-floating">
                             <input type="email" class="form-control" id="mail" placeholder="name@example.com"
-                                required>
-                            <label for="floatingInput">Adresse mail <span class="obligatoire">*</span></label>
+                                required name="mail">
+                            <label for="mail">Adresse mail <span class="obligatoire">*</span></label>
         </div>
         <div class="form-floating">
             <input type="text" class="form-control" id="Identifiant" placeholder="Exemple01"
-                required>
-            <label for="floatingInput"> Identifiant <span class="obligatoire">*</span> </label>
+                required name="identifiant">
+            <label for="Identifiant"> Identifiant <span class="obligatoire">*</span> </label>
         </div>
         
         <div class="form-floating">
             <input type="password" class="form-control" id="mdp" placeholder="Password"
-                required minlength="8">
-            <label for="floatingPassword"> Mot de passe <span class="obligatoire">*</span> (8 caractères minimum)</label>
+                required minlength="8" name="mdp">
+            <label for="mdp"> Mot de passe <span class="obligatoire">*</span> (8 caractères minimum)</label>
         </div>
 
         <div class="msg_crercompte">
