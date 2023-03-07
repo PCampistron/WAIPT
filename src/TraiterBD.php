@@ -143,7 +143,7 @@
             JOIN GENRE g on g.id_genre = c.id_genre 
             JOIN GOUTS gou on gou.id_genre = g.id_genre
             JOIN UTILISATEUR u on u.id_utilisateur = gou.id_utilisateur
-            WHERE u.id_utilisateur = 'U000001'
+            WHERE u.id_utilisateur = '1'
             ORDER BY RAND() LIMIT 1");
             $requete->execute();
             $results = $requete->fetchAll();
@@ -206,6 +206,16 @@
             $nouvel_id = "U" . str_pad($num, 6, "0", STR_PAD_LEFT);
             return $nouvel_id; 
 
+        }
+        public function mail_unique(string $mail)
+        {
+            $dbname ='pcampistron_bd';
+            $dsn="mysql:host=lakartxela;dbname=$dbname";
+            $user ='pcampistron_bd';
+            $pass='pcampistron_bd';
+            $db = new PDO($dsn, $user, $pass);
+
+            
         }
     }   
 
