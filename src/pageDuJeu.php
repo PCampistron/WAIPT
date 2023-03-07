@@ -22,39 +22,39 @@
 <body>
     <header>
         <?php
-        $categoriePage = "CREER COMPTE";
+        $categoriePage = "CATALOGUE";
         include "menuNav.php";
       ?>
     </header>
     <main>
         <div class="container">
         <?php
-  // Établit la connexion à la base de données
-  include "connDb.php";
+            // Établit la connexion à la base de données
+            include "connDb.php";
 
-  // Récupération de l'identifiant du jeu
-  $id_jeu = $_GET['id'];
-  
+            // Récupération de l'identifiant du jeu
+            $id_jeu = $_GET['id'];
+            
 
- // Préparation de la requête SQL 
- $requete =  $db -> prepare ("SELECT * FROM JEU j JOIN DISPONIBILITE d on j.id_jeu = d.id_jeu JOIN PLATEFORME p on d.id_plateforme = p.id_plateforme 
-   JOIN DEFI def on def.id_jeu = j.id_jeu 
- WHERE j.id_jeu = '$id_jeu'"); 
- $requete -> execute(); 
- $results= $requete->fetchAll(); 
+            // Préparation de la requête SQL 
+            $requete =  $db -> prepare ("SELECT * FROM JEU j JOIN DISPONIBILITE d on j.id_jeu = d.id_jeu JOIN PLATEFORME p on d.id_plateforme = p.id_plateforme 
+            JOIN DEFI def on def.id_jeu = j.id_jeu 
+            WHERE j.id_jeu = '$id_jeu'"); 
+            $requete -> execute(); 
+            $results= $requete->fetchAll(); 
 
 
- // Parcoure chaque ligne du résultat et affiche les données du jeu 
- foreach ($results as $row) { 
-  echo '<article class="cd">';
-   echo '<div class="presentation">'; 
-   echo '<img src="img/jeux/'. $row['id_jeu'].'_carre.png" alt="Pochette" class="Pochette">'; 
-   echo '<h3 class="titre_desc"> Nom du jeu : ' . $row['nom_jeu']; 
-   echo '<p class="info_desc"> Prix Conseille : ' . $row['prixConseille'] . ' €</p>';
-    echo '<p class="info_desc"> Lien magasin : <a href='. $row['lienMagasin'] .'> Page du jeu </a href>'; 
-    echo '<p class="info_desc"> Liste des defis : ' . $row['intitule'];
-   }
- ?>
+            // Parcoure chaque ligne du résultat et affiche les données du jeu 
+            foreach ($results as $row) { 
+            echo '<article class="cd">';
+            echo '<div class="presentation">'; 
+            echo '<img src="img/jeux/'. $row['id_jeu'].'_carre.png" alt="Pochette" class="Pochette">'; 
+            echo '<h3 class="titre_desc"> Nom du jeu : ' . $row['nom_jeu']; 
+            echo '<p class="info_desc"> Prix Conseille : ' . $row['prixConseille'] . ' €</p>';
+                echo '<p class="info_desc"> Lien magasin : <a href='. $row['lienMagasin'] .'> Page du jeu </a href>'; 
+                echo '<p class="info_desc"> Liste des defis : ' . $row['intitule'];
+            }
+            ?>
 
         </div>
 
