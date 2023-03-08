@@ -1,8 +1,6 @@
 
 
 
-
-
 <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand mb-0 h1 align-middle" href="index.php">
         <img src="img/waipt/Logo.jpg" alt="Logo" height=30px width=30px class="d-inline-block align-middle">
@@ -73,8 +71,24 @@
     </div>
    
     
-            
-        <a class="btn btn-outline-success" type="button" href="connexion.php">Se connecter</a>
+        <?php
+            if(!isset($_SESSION))
+            {
+                echo '<a class="btn btn-outline-success" type="button" href="connexion.php">Se connecter</a>';
+            }
+            else
+            {
+                if($_SESSION['connecte'] == true)
+                {
+                    echo '<a class="btn btn-outline-success" type="button" href="profil.php">Profil</a>';
+                }
+                else
+                {
+                    echo '<a class="btn btn-outline-success" type="button" href="connexion.php">Se connecter</a>';
+                }
+            }
+        ?>
+        
     </div>
 </nav>
 

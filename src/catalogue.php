@@ -1,3 +1,7 @@
+<?php
+    include "includes.php";
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
