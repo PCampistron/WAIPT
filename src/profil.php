@@ -32,7 +32,7 @@
         $categoriePage = "PROFIL";
         include ("menuNav.php");
         ?>
-    </header>
+    </header> 
     <main>
         <div class="parent">
 
@@ -59,6 +59,7 @@
                 include "informationjoueur.php";
                 ?> 
                 <a class="btn btn-outline-danger" type="button" href="deconnexion.php">Se déconnecter</a>
+                <a class="btn btn-outline-info" type="button" href="parametrage_compte.php">Modifier profil</a>
             </div>
 
             <div class="droite">

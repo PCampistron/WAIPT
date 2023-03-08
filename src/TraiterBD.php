@@ -10,7 +10,7 @@
 
     include "Requete.php";
     include_once "Jeu.php";
-
+    
     class TraiterBD
     {
         // ATTRIBUTS
@@ -135,6 +135,7 @@
             $dsn="mysql:host=lakartxela;dbname=$dbname";
             $user ='pcampistron_bd';
             $pass='pcampistron_bd';
+            $id = $_SESSION['id'];
 
             $db = new PDO($dsn, $user, $pass);
 
@@ -143,7 +144,7 @@
             JOIN GENRE g on g.id_genre = c.id_genre 
             JOIN GOUTS gou on gou.id_genre = g.id_genre
             JOIN UTILISATEUR u on u.id_utilisateur = gou.id_utilisateur
-            WHERE u.id_utilisateur = '1'
+            WHERE u.id_utilisateur = $id
             ORDER BY RAND() LIMIT 1");
             $requete->execute();
             $results = $requete->fetchAll();
