@@ -32,7 +32,7 @@
         $categoriePage = "PROFIL";
         include ("menuNav.php");
         ?>
-    </header>
+    </header> 
     <main>
         <div class="parent">
 
