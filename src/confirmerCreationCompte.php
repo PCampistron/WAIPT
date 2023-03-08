@@ -34,6 +34,7 @@
     exit;
 } else {
     $_SESSION['connecte'] = true;
+    $_SESSION['id'] = 1;
     header("location: profil.php");
     exit;
 }
