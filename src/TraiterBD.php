@@ -183,40 +183,7 @@
             return $jeu;
         }
 
-        public function incrementation_id()
-        {
-            $dbname ='pcampistron_bd';
-            $dsn="mysql:host=lakartxela;dbname=$dbname";
-            $user ='pcampistron_bd';
-            $pass='pcampistron_bd';
-
-            $db = new PDO($dsn, $user, $pass);
-
-            $requete = $db->prepare("SELECT id_utilisateur FROM UTILISATEUR ORDER BY id_utilisateur DESC LIMIT 1 ");
-            $requete->execute();
-            $derniere_id = $requete->fetchColumn();
-
-        // Decoupage du U de l'id puis transformation du nombre (partie droite de l'id) en int
-            $num = intval(substr($derniere_id, 1));
-
-        // incrémentation de l'entier
-            $num++;
-
-        // reconstruction de l'id avec le nouvel entier
-            $nouvel_id = "U" . str_pad($num, 6, "0", STR_PAD_LEFT);
-            return $nouvel_id; 
-
-        }
-        public function mail_unique(string $mail)
-        {
-            $dbname ='pcampistron_bd';
-            $dsn="mysql:host=lakartxela;dbname=$dbname";
-            $user ='pcampistron_bd';
-            $pass='pcampistron_bd';
-            $db = new PDO($dsn, $user, $pass);
-
-            
-        }
+       
     }   
 
 ?>

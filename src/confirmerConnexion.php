@@ -6,7 +6,8 @@ include "connDb.php";
 if (isset($_POST['mdp']) && isset($_POST['identifiant'])) 
 {
     $identifiant = $_POST['identifiant'];
-    $mdp = $_POST['mdp'];
+    $mdp = crypt($_POST['mdp'], $seed);
+    
     
     // Requete de vérification
     var_dump($identifiant);
@@ -14,6 +15,7 @@ if (isset($_POST['mdp']) && isset($_POST['identifiant']))
     $requete = $db -> prepare ("SELECT * FROM UTILISATEUR WHERE pseudo ='$identifiant' and mdp ='$mdp'");
     $resultat =  $requete -> execute();
     var_dump($resultat);
+    
     if ($requete) {
         echo 'CONENXION REUSSIE OUAISSSS !';
       } 
