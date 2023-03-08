@@ -1,5 +1,10 @@
 <?php
     include "includes.php";
+    if ($_SESSION['connecte']==false)
+    {
+        header("location: connexion.php");
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -53,6 +58,7 @@
                 <?php
                 include "informationjoueur.php";
                 ?> 
+                <a class="btn btn-outline-danger" type="button" href="deconnexion.php">Se déconnecter</a>
             </div>
 
             <div class="droite">

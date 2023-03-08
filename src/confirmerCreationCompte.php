@@ -28,13 +28,15 @@
   $result = $requete->execute();
 
   if (!$result) {
-    
     throw new Exception("Erreur : " . $requete->errorInfo()[2]);
     header("location: creationCompte.php");
     exit;
 } else {
     $_SESSION['connecte'] = true;
-    $_SESSION['id'] = 1;
+    $requete =  $db -> prepare ("SELECT id_utilisateur FROM UTILISATEUR u WHERE u.mail = '$mail'"); 
+    $requete -> execute(); 
+    $results= $requete->fetchAll(); 
+    $_SESSION['id'] = $results[0]['id_utilisateur'];
     header("location: profil.php");
     exit;
 }
@@ -42,8 +44,6 @@
 
     
     
-    
-
   // Fermeture de la connexion à la base de données
   unset($db);
 ?>
