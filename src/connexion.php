@@ -46,18 +46,18 @@
                         <br>
                     </div>
                      <div class="formulaire_connexion">
-                    <form>
+                    <form method="post" action="confirmerConnexion.php">
 
                         <h1 class="h3 mb-3 fw-normal"> Veuillez rentrer vos informations de connexion</h1>
 
                         <div class="form-floating">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                            <input type="email" class="form-control" name="mail" placeholder="name@example.com"
                                 required>
                             <label for="floatingInput">Adresse mail <span class="obligatoire">*</span></label>
                         </div>
 
                         <div class="form-floating">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+                            <input type="password" class="form-control" name="mdp" placeholder="Password"
                                 required minlength="8">
                             <label for="floatingPassword">Mot de passe <span class="obligatoire">*</span> (8 caractères minimum)</label>
                         </div>
