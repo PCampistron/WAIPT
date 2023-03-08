@@ -91,7 +91,7 @@ include ('includes.php'); ?>
         <?php
 if(isset($_POST['submit'])) {
 
-$id = SESSION['id'];
+$id = $_SESSION['id'];
 // Récupérer le fichier téléchargé et le nom temporaire du fichier
 $image = $_FILES['image']['tmp_name'];
 
