@@ -5,7 +5,7 @@
 
 
   // Récupération des valeurs des champs de saisie
-  $pseudo = $_POST['identifiant'];
+  $pseudo = htmlentities($_POST['identifiant']);
   $mdp = crypt($_POST['mdp'], $seed);
   $mail = $_POST['mail'];
   $dateInscription  = date("Y-m-d");
