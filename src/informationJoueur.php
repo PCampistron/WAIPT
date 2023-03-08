@@ -18,7 +18,7 @@
             include "connDb.php";
 
             // Récupération de l'identifiant du jeu
-            $id_utilisateur = "U524";
+            $id_utilisateur = $_SESSION['id'];
             
 
             // Préparation de la requête SQL 
