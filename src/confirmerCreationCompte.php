@@ -28,7 +28,6 @@
   $result = $requete->execute();
 
   if (!$result) {
-    
     throw new Exception("Erreur : " . $requete->errorInfo()[2]);
     header("location: creationCompte.php");
     exit;
