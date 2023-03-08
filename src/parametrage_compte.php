@@ -64,16 +64,20 @@ include ('includes.php'); ?>
       };
       echo '</fielset>';
     ?>
+    <input class="w-100 btn btn-lg btn-primary" type="submit" value="Confirmer votre selection" name="genre" id="bouton_genre">
+  </form>
   </div>
-  <h3 class="titre_genre">Configurez les informations de votre profil</h3>
 
+  <h3 class="titre_genre">Configurez les informations de votre profil</h3>
+  <form method="post" enctype="multipart/form-data">
     <div class="insertion_image">
       <legend for="image">Sélectionnez une photo de profil:</legend>
       <input type="file" class="form-control-file" id="image" name="image" onchange="previewPicture(this)" required>
       <img id="preview" width="200px" length="200px">
     </div>
-    <input class="w-100 btn btn-lg btn-primary" type="submit" value="Confirmer" name="submit" id="bouton_genre">
+    <input class="w-100 btn btn-lg btn-primary" type="submit" value="Confirmer changement image" name="submit" id="bouton_genre">
   </form>
+
 </div>
  
 <script>
@@ -87,11 +91,12 @@ include ('includes.php'); ?>
     }
   }
 </script>
-
+  
         <?php
+        $id = $_SESSION['id'];
 if(isset($_POST['submit'])) {
 
-$id = $_SESSION['id'];
+
 // Récupérer le fichier téléchargé et le nom temporaire du fichier
 $image = $_FILES['image']['tmp_name'];
 
@@ -118,8 +123,25 @@ $source = $destination;
 $destination_path = 'img/user/' . $new_name;
 imagepng($source, $destination_path);
 imagedestroy($source); }
-?>
 
+// Recuperation des gouts de l'utilisateur
+if (isset($_POST['genre'])) {
+  if (!empty($_POST['genres'])) {
+    foreach($_POST['genres'] as $genre){
+      $insertion = "INSERT INTO GOUTS ( id_utilisateur, id_genre, aimer) VALUES ( :id_utilisateur, :id_genre, :aimer)";
+      $requete = $db->prepare($insertion);
+      $aimer =1;
+    // Bind des valeurs
+    $requete->bindParam(':id_utilisateur', $id);
+    $requete->bindParam(':id_genre', $genre);
+    $requete->bindParam(':aimer', $aimer);
+      // Exécution de la requête
+    $result = $requete->execute();
+     
+    }
+  }
+}
+?>
 
 
 
