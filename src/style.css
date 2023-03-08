@@ -83,3 +83,12 @@ min-height: 100vh;
 
 .boiteConn { padding : 8%;}
 .obligatoire {color: red;}
+
+.custom-img {
+  height: 200px;
+  width: 200px;
+}
+
+.prix{
+  color:#351c75;
+}

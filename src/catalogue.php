@@ -52,16 +52,29 @@ include "connDb.php";
  $results= $requete->fetchAll();
 
 
-
+echo'<div class="row">';
  foreach ($results as $row) {
-    echo '<article class="cd">';
-    echo '<div class="presentation">';
-    echo '<h3>' . $row['nom_jeu'] ;
-    //CREATION D'ICONES
-    echo '<img src="img/jeux/'.$row['id_jeu'].'_carre.png" height="20%" width="10%" alt="Pochette" class="Pochette">';
-    echo '<p class="prix" > Prix : ' . $row['prixConseille'] . ' €</p>';
-    echo '</article>';
+    // echo '<article class="cd">';
+    // echo '<div class="presentation">';
+    // echo '<h3>' . $row['nom_jeu'] ;
+    // //CREATION D'ICONES
+    // echo '<img src="img/jeux/'.$row['id_jeu'].'_carre.png" height="20%" width="10%" alt="Pochette" class="Pochette">';
+    // echo '<p class="prix" > Prix : ' . $row['prixConseille'] . ' €</p>';
+    // echo '</article>';
+    
+    echo '<div class="col-md-4">
+            <div class="card">
+              <img src="img/jeux/'.$row['id_jeu'].'_carre.png" class="card-img-top custom-img" alt="Nom du jeu">
+              <div class="card-body">
+                <h5 class="card-title">'.$row['nom_jeu'].'</h5>
+                <p class="card-text prix">Prix : ' . $row['prixConseille'] . ' € </p>
+                <a href="pageDuJeu.php?id=' . $row['id_jeu'] .'" class="btn btn-primary">Voir le jeu</a>
+              </div>
+            </div>
+        </div>';
 }
+
+echo'</div>';
 
 ?>
 
