@@ -59,6 +59,7 @@
                 include "informationjoueur.php";
                 ?> 
                 <a class="btn btn-outline-danger" type="button" href="deconnexion.php">Se déconnecter</a>
+                <a class="btn btn-outline-info" type="button" href="choisir_gout.php">Modifier profil</a>
             </div>
 
             <div class="droite">

@@ -83,3 +83,28 @@ min-height: 100vh;
 
 .boiteConn { padding : 8%;}
 .obligatoire {color: red;}
+.genre {
+  padding-bottom: 2%;
+}
+.liste_genre {
+  list-style-type: none;
+  font: 120% black solid;
+  padding-bottom: 0.2em;
+  justify-content:flex-start;
+ 
+}
+.titre_genre {
+  padding: 1em; 
+}
+.image_genre{
+  padding-bottom: 1em;
+  justify-content: center;
+}
+.insertion_image{
+  padding-bottom: 1em;
+  justify-content: center;
+}
+#bouton_genre{
+  
+  padding-top: 0%;
+}

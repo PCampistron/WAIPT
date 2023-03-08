@@ -5,7 +5,7 @@
 
 
   // Récupération des valeurs des champs de saisie
-  $pseudo = $_POST['identifiant'];
+  $pseudo = htmlentities($_POST['identifiant']);
   $mdp = crypt($_POST['mdp'], $seed);
   $mail = $_POST['mail'];
   $dateInscription  = date("Y-m-d");
@@ -28,7 +28,6 @@
   $result = $requete->execute();
 
   if (!$result) {
-    
     throw new Exception("Erreur : " . $requete->errorInfo()[2]);
     header("location: creationCompte.php");
     exit;

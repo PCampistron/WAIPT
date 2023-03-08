@@ -2,28 +2,34 @@
 include "includes.php";
 include "connDb.php";
 
-
-if (isset($_POST['mdp']) && isset($_POST['identifiant'])) 
+if (isset($_POST['mdp']) && isset($_POST['mail'])) 
 {
-  $identifiant = $_POST['identifiant'];
-  $mdp = crypt($_POST['mdp'], $seed);
-      
-  // Requete de vérification
-  var_dump($identifiant);
-  var_dump($mdp);
-  $requete = $db -> prepare ("SELECT * FROM UTILISATEUR WHERE pseudo ='$identifiant' and mdp ='$mdp'");
-  $resultat =  $requete -> execute();
-  var_dump($resultat);
-  if ($resultat) 
-  {
-    echo 'CONENXION REUSSIE OUAISSSS !';
-  } 
-  else
-  {
-          echo "Les informations saisies sont incorrectes";
-        }
-  }
-  else {
-      echo 'Veuillez remplir tout les champs !';
-  }
+    $mail = $_POST['mail'];
+    $mdp = crypt($_POST['mdp'], $seed);
+
+    // Requete de vérification
+    $requete = $db -> prepare ("SELECT * FROM UTILISATEUR WHERE mail ='$mail' and mdp ='$mdp'");
+    $requete -> execute();
+    
+    if ($requete->rowCount() == 1) {
+        $_SESSION['connecte'] = true;
+        $requete =  $db -> prepare ("SELECT id_utilisateur FROM UTILISATEUR u WHERE u.mail = '$mail'"); 
+        $requete -> execute(); 
+        $results= $requete->fetchAll(); 
+        $_SESSION['id'] = $results[0]['id_utilisateur'];
+        header("location: profil.php");
+        exit;
+      } 
+      else {
+        header("location: connexion.php");
+        exit;
+      }
+    
+}
+else {
+    header("location: connexion.php");
+    exit;
+}
+
 ?>
+    
