@@ -62,9 +62,9 @@ echo'<div class="row">';
     // echo '<p class="prix" > Prix : ' . $row['prixConseille'] . ' €</p>';
     // echo '</article>';
     
-    echo '<div class="col-md-4">
+    echo '<div class="col-md-2">
             <div class="card">
-              <img src="img/jeux/'.$row['id_jeu'].'_carre.png" class="card-img-top custom-img" alt="Nom du jeu">
+              <img src="img/jeux/'.$row['id_jeu'].'_carre.png" class="card-img-top" alt="Nom du jeu">
               <div class="card-body">
                 <h5 class="card-title">'.$row['nom_jeu'].'</h5>
                 <p class="card-text prix">Prix : ' . $row['prixConseille'] . ' € </p>
