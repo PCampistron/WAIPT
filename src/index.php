@@ -30,6 +30,7 @@
         <?php
         $categoriePage = "ACCUEIL";
         include ('menuNav.php');
+        
         ?>
     </header>
 
@@ -42,12 +43,15 @@
             <div class="centre">
 
                 <div class="grid text-center">
-
+                    <?php include "barreRecherche.php"; ?>
                     <div class="g-col-6 d-flex justify-content-center">
                         <?php
+                        
                 include "connDb.php";
                 include "Jeu.php";
                 include "TraiterBD.php";
+                
+                
 
                 if(isset($_POST['random_button']))
                 {

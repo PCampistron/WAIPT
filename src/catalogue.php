@@ -66,7 +66,7 @@ echo'<div class="row">';
             <div class="card">
               <img src="img/jeux/'.$row['id_jeu'].'_carre.png" class="card-img-top" alt="Nom du jeu">
               <div class="card-body">
-                <h5 class="card-title">'.$row['nom_jeu'].'</h5>
+                <h3 class="card-title">'.$row['nom_jeu'].'</h3>
                 <p class="card-text prix">Prix : ' . $row['prixConseille'] . ' € </p>
                 <a href="pageDuJeu.php?id=' . $row['id_jeu'] .'" class="btn btn-primary">Voir le jeu</a>
               </div>
