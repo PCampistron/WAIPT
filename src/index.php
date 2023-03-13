@@ -84,14 +84,20 @@
                 }
                 include ("afficherJeu.php");
                 }
-                echo '</div>';
-                echo '<div class="d-grid gap-2 d-md-block">';
-                echo '<form action="index.php" method="POST">'  ;
-                echo '<input class="btn btn-primary" type="submit" name="random_button" value="Tirage aléatoire"></input>';
-                echo '<input class="btn btn-primary" type="submit" name="random_button_gouts" value="Tirage aléatoire selon vos gouts"></input>';
-                echo '</form>';
-                echo '</div>';
                 ?>
+                </div>
+                <div class="d-grid gap-2 d-md-block">
+                <form action="index.php" method="POST">
+                <input class="btn btn-primary" type="submit" name="random_button" value="Tirage aléatoire"></input>
+    
+                <input class="btn btn-primary" type="submit" id="bouton_tirage_genre" name="random_button_gouts" value="Tirage aléatoire selon vos gouts" 
+                <?php if(!isset($_SESSION['connecte']) || $_SESSION['connecte'] !== true) echo 'disabled' ?>>
+                </input>
+                
+                </form>
+               </div>
+
+
 
                     </div>
 

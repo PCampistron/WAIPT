@@ -112,8 +112,7 @@ min-height: 100vh;
   justify-content: center;
 }
 #bouton_genre{
-  
-  padding-top: 1em;
+  padding-top: 0.5em;
 }
 
 .recherche {
