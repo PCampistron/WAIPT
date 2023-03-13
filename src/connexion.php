@@ -48,6 +48,15 @@
                      <div class="formulaire_connexion">
                     <form method="post" action="confirmerConnexion.php">
 
+                        <?php
+                                if($_SESSION['mdpErrone'] == true)
+                                {
+                                    echo '<div class="alert alert-danger" role="alert">
+                                    Identifiant ou mot de passe invalide.
+                                    </div>';
+                                }
+                        ?>
+
                         <h1 class="h3 mb-3 fw-normal"> Veuillez rentrer vos informations de connexion</h1>
 
                         <div class="form-floating">

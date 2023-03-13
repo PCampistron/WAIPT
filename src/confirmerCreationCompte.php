@@ -28,7 +28,7 @@
   $result = $requete->execute();
 
   if (!$result) {
-    throw new Exception("Erreur : " . $requete->errorInfo()[2]);
+    $_SESSION['dejaExistant'] = true;
     header("location: creationCompte.php");
     exit;
 } else {
@@ -37,6 +37,7 @@
     $requete -> execute(); 
     $results= $requete->fetchAll(); 
     $_SESSION['id'] = $results[0]['id_utilisateur'];
+    $_SESSION['dejaExistant'] = false;
     header("location: profil.php");
     exit;
 }

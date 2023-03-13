@@ -17,10 +17,12 @@ if (isset($_POST['mdp']) && isset($_POST['mail']))
         $requete -> execute(); 
         $results= $requete->fetchAll(); 
         $_SESSION['id'] = $results[0]['id_utilisateur'];
+        $_SESSION['mdpErrone'] = false;
         header("location: profil.php");
         exit;
       } 
       else {
+        $_SESSION['mdpErrone'] = true;
         header("location: connexion.php");
         exit;
       }

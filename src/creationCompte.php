@@ -49,6 +49,15 @@
                     <div class="formulaire_insciption">
     <form method="post" action="confirmerCreationCompte.php" >
 
+        <?php
+            if($_SESSION['dejaExistant'] == true)
+            {
+                echo '<div class="alert alert-danger" role="alert">
+                    Adresse mail ou identifiant déjà utilisé.
+                    </div>';
+            }
+        ?>
+
         <h1 class="h3 mb-3 fw-normal"> Veuillez rentrer vos informations d'inscription </h1>
 
         <div class="form-floating">
