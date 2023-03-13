@@ -113,5 +113,43 @@ min-height: 100vh;
 }
 #bouton_genre{
   
-  padding-top: 0%;
+  padding-top: 1em;
+}
+
+.recherche {
+  padding-top: 10em;
+}
+
+#saisie_recherche{
+  width: 60%;
+ 
+  padding-top:0em;
+  font-style: italic;
+}
+#bouton_recherche{
+  transform: scale(90%);
+}
+#boites_recherche{
+ padding: 0.3em;
+}
+
+.form_recherche{
+  padding-top: 2em;
+  
+}
+
+#titre_recherche{
+  padding-top: 0.5em;
+  text-align: center;
+}
+
+#commentaire_recherche{
+  padding-left: 1em;
+  
+}
+#table{
+ 
+  padding-left: 25em;
+  padding-top: 1em;
+
 }
